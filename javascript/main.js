@@ -1,29 +1,29 @@
+const navBar = document.getElementById('navBar');
+const modeBtn = document.getElementById('modeBtn');
+let lastY = window.scrollY;
 
-let navbar = document.getElementById('navbar');
-let lastScrollY = window.scrollY;
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', () => {
   if (window.scrollY > 100) {
-    navbar.classList.add('hidden');
+    navBar.classList.add('hidden');
   } else {
-    navbar.classList.remove('hidden');
+    navBar.classList.remove('hidden');
   }
 });
 
-document.addEventListener('mousemove', function(e) {
+
+document.addEventListener('mousemove', (e) => {
   if (e.clientY <= 50 && window.scrollY > 100) {
-    navbar.classList.add('visible');
+    navBar.classList.add('visible');
   } else if (window.scrollY > 100) {
-    navbar.classList.remove('visible');
+    navBar.classList.remove('visible');
   }
 });
 
 
-const modeToggle = document.getElementById('modeToggle');
-
-modeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-  modeToggle.textContent = document.body.classList.contains('light-mode')
+modeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+  modeBtn.textContent = document.body.classList.contains('light')
     ? '🌙 Dark Mode'
     : '☀️ Light Mode';
 });
