@@ -181,6 +181,14 @@ hr {
 }
 .heroImg{
   padding: 1em;
+  flex: 1;
+}
+
+.heroImg img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .infoGrid {
