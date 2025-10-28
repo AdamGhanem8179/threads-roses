@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Times New Roman", serif;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s;   
 }
 
 /* Navbar */
@@ -11,7 +11,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #000;
+  background: black;
   padding: 1em 0;
   z-index: 1000;
   display: flex;
@@ -23,7 +23,7 @@ nav {
 .menu {
   display: flex;
   list-style: none;
-  gap: 3rem;
+  gap: 3em;
 }
 
 .menu a {
@@ -32,11 +32,11 @@ nav {
 }
 
 .menu a:hover {
-  color: #ffcccb;
+  color: rgb(184, 184, 17);
 }
 
 
-.settingsBox,
+.settingsBox,       /*main class*/
 .cartBtn {
   position: fixed;
   top: 0.5em;
@@ -64,7 +64,7 @@ nav {
 
 .sideMenu {
   position: fixed;
-  top: 60px;
+  top: 3.75em;
   left: 0;
   background: #222;
   color: #fff;
@@ -72,16 +72,16 @@ nav {
   border-radius: 0 0.625em 0.625em 0;
   box-shadow: 0.125em 0 0.5em rgba(0, 0, 0, 0.4);
   opacity: 0;
-  transform: translateX(-100%);
-  transition: transform 0.3s, opacity 0.3s;
+  transform: translateX(-100%);      /*betkhaleya tetkhabba*/
+  transition: transform 0.3s, opacity 0.3s;  /*human readable*/
   width: 15.625em;
-  pointer-events: none;
+  pointer-events: none;            
 }
 
 .settingsBox:hover .sideMenu {
   transform: translateX(0);
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: auto;  /*automatic settings popup*/
 }
 
 .sideMenu ul {
@@ -97,10 +97,14 @@ nav {
   text-decoration: none;
 }
 
+.sideMenu a:hover {
+color:rgb(184, 184, 17);
+}
+
+
 #modeBtn {
   background: #444;
   color: #fff;
-  border: none;
   padding: 0.625em;
   border-radius: 0.375em;
   cursor: pointer;
@@ -112,17 +116,17 @@ nav {
 }
 
 /* Light Mode */
-body.light {
+body.light {            /*javascript*/
   background: #fff;
   color: #000;
 }
 
-body.light nav {
+body.light nav {        /*background of the nav bar white*/
   background: #eee;
 }
 
 body.light .menu a,
-body.light .settingsIcon,
+body.light .settingsIcon,  /*text to be black once light mode*/
 body.light .cartBtn a {
   color: #000;
 }
@@ -141,12 +145,12 @@ body.light #modeBtn {
 
 .logo img {
   display: block;
-  margin: 4em auto 0;
+  margin: 4em auto 0;  /*top right&left bottom*/
   width: 5em;
   height: 5em;
 }
 
-hr {
+hr {                /*line below logo*/
   border: none;
   border-top: 0.0625px solid #000;
   margin: 1em 0;
@@ -160,7 +164,7 @@ hr {
 }
 
 
-.hero {
+.Mid {
   display: flex;
   align-items: center;
   gap: 3em;
@@ -170,21 +174,25 @@ hr {
   margin-right: 1em;
 }
 
-.heroText {
+.MidText {
   flex: 1;
+  margin-left: 1em;
+ 
 }
 
-.heroText h1 {
+.MidText h1 {
   font-size: 2.5em;
   margin-bottom: 2em;
   line-height: 1.3;
+  
 }
-.heroImg{
+.MidImg{
   padding: 1em;
-  flex: 1;
+  flex:1;        /*adde space tekhod */
+ 
 }
 
-.heroImg img {
+.MidImg img {
   width: 100%;
   height: auto;
   display: block;
@@ -195,6 +203,8 @@ hr {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
+  
+
 }
 
 .infoItem {
@@ -204,13 +214,13 @@ hr {
 }
 
 .infoItem span {
-  color: #4caf50;
+  color: #4caf50;   /*check*/
   font-size: 1.5em;
 }
 
 
 .brandWrap {
-  overflow: hidden;
+  overflow: hidden;  /*tusal lal ekher tbattel tbayen*/
   width: 100%;
   margin-top: 2em;
 }
@@ -218,7 +228,7 @@ hr {
 .brandScroll {
   display: flex;
   gap: 3em;
-  animation: scroll 25s linear infinite;
+  animation: scroll 25s linear infinite; 
 }
 
 .brandScroll img {
@@ -227,18 +237,24 @@ hr {
   object-fit: contain;
 }
 
-@keyframes scroll {
+@keyframes scroll {                        /* for animations*/
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-50%); }   /*btemshe men l 0 lal -50% (right to left) illusion to reach the half then repeat*/
 }
 
 /* Showcase */
 .showcase .items {
   display: flex;
   gap: 2em;
-  margin: 3em 4em;
+  margin: 2em;
   background: #e8e8e8;
   padding: 3em 2em;
+}
+
+
+.showcase .card{
+  margin-left:2em;
+  margin-right:2em;
 }
 
 .card img {
@@ -264,18 +280,19 @@ hr {
 footer { 
   background-color: black; 
   padding: 10em;
-   margin: 0;
-    bottom: 0;
-     width: 100%; 
+  margin: 0;
+  bottom: 0;
+  width: 100%; 
     }
+
 .media ul{
    display: flex; 
    list-style: none;
   }
 .media img{
    width: 4em;
-    height: 4em; 
-    gap: 1em; 
+   height: 4em; 
+   gap: 1em; 
   }
 
 footer .Headers{ 
@@ -314,16 +331,7 @@ footer .Headers {
   
 }
 
-.social {
-  display: flex;
-  list-style: none;
-  gap: 1em;
-}
-
-.social img {
-  width: 3.5em;
-  height: 3.5em;
-}
-
 nav.hidden { transform: translateY(-100%); }
 nav.visible { transform: translateY(0); }
+
+
