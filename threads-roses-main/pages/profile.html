@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile - Threads & Roses</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/profile.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navBar">
+    <ul class="menu">
+      <li><a href="../index.html#clothes">Clothing</a></li>
+      <li><a href="../index.html#accessories">Accessories</a></li>
+      <li><a href="../index.html#housewares">Housewares</a></li>
+      <li><a href="../index.html#furniture">Furniture</a></li>
+      <li><a href="../index.html#decor">Home Decor</a></li>
+      <li><a href="../index.html#worn">Worn</a></li>
+    </ul>
+
+    <div class="settingsBox">
+      <div class="settingsIcon">⚙️</div>
+      <div class="sideMenu">
+        <ul>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="#cart">Shopping Cart</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cartBtn">
+      <a href="#cart">🛒</a>
+    </div>
+  </nav>
+
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../images/logo.png" alt="Logo" />
+    </a>
+  </div>
+
+  <hr/>
+
+  
+  <section class="profileHeader">
+    <div class="profilePhotoContainer">
+      <img src="" alt="Profile Photo" class="profilePhoto" id="profilePhoto" />
+    </div>
+    <h1 class="profileUsername">@rimisautistic</h1>
+    <p class="profileBio">Collector of timeless pieces • Sustainable fashion enthusiast • Vintage curator since 2020 🌿✨</p>
+    <div class="profileStats">
+      <div class="statBox">
+        <h3>127</h3>
+        <p>Followers</p>
+      </div>
+      <div class="statBox">
+        <h3>89</h3>
+        <p>Following</p>
+      </div>
+      <div class="statBox">
+        <h3>43</h3>
+        <p>Items Sold</p>
+      </div>
+      <div class="statBox">
+        <h3>156</h3>
+        <p>Likes</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="profileTabs">
+    <button class="tabBtn active" data-tab="reviews">Reviews</button>
+    <button class="tabBtn" data-tab="orders">Orders</button>
+    <button class="tabBtn" data-tab="listings">My Listings</button>
+    <button class="tabBtn" data-tab="purchases">Purchase History</button>
+    <button class="tabBtn" data-tab="messages">Messages</button>
+    <button class="tabBtn" data-tab="payment">Payment Methods</button>
+  </section>
+
+  
+  <section class="tabContent">
+    
+    
+    <div class="tabPanel active" id="reviews">
+      <h2 class="sectionTitle">Customer Reviews</h2>
+      <div class="reviewsContainer">
+        <div class="reviewCard">
+          <div class="reviewHeader">
+            <img src="" alt="Reviewer" class="reviewerPhoto" />
+            <div class="reviewerInfo">
+              <h4>Sarah Mitchell</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <span class="reviewDate">2 weeks ago</span>
+          </div>
+          <p class="reviewText">"Amazing vintage finds! The quality was even better than described. Fast shipping and beautiful packaging. Will definitely buy again!"</p>
+        </div>
+
+        <div class="reviewCard">
+          <div class="reviewHeader">
+            <img src="" alt="Reviewer" class="reviewerPhoto" />
+            <div class="reviewerInfo">
+              <h4>Marcus Johnson</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <span class="reviewDate">1 month ago</span>
+          </div>
+          <p class="reviewText">"Great seller! Very responsive to messages and the item was exactly as pictured. Love supporting sustainable fashion through this shop."</p>
+        </div>
+
+        <div class="reviewCard">
+          <div class="reviewHeader">
+            <img src="" alt="Reviewer" class="reviewerPhoto" />
+            <div class="reviewerInfo">
+              <h4>Emma Rodriguez</h4>
+              <div class="stars">⭐⭐⭐⭐</div>
+            </div>
+            <span class="reviewDate">2 months ago</span>
+          </div>
+          <p class="reviewText">"Beautiful vintage piece! Took a bit longer to ship than expected, but worth the wait. Item was carefully packaged and in excellent condition."</p>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="tabPanel" id="orders">
+      <h2 class="sectionTitle">Track Your Orders</h2>
+      <div class="ordersContainer">
+        <div class="orderCard">
+          <div class="orderHeader">
+            <h4>Order #TR-20251105-847</h4>
+            <span class="orderStatus shipped">Shipped</span>
+          </div>
+          <p class="orderDate">Placed on November 5, 2025</p>
+          <div class="orderItems">
+            <p>• Vintage Nike Windbreaker (Blue, Size L)</p>
+            <p>• Retro Champion Sweatshirt</p>
+          </div>
+          <p class="orderTotal">Total: $87.50</p>
+          <div class="orderTracking">
+            <p><strong>Tracking:</strong> UPS-9847562314</p>
+            <p>Expected Delivery: November 12, 2025</p>
+          </div>
+          <button class="btnTrack">Track Package</button>
+        </div>
+
+        <div class="orderCard">
+          <div class="orderHeader">
+            <h4>Order #TR-20251028-623</h4>
+            <span class="orderStatus delivered">Delivered</span>
+          </div>
+          <p class="orderDate">Placed on October 28, 2025</p>
+          <div class="orderItems">
+            <p>• Levi's 501 Denim Jeans (Vintage Wash)</p>
+          </div>
+          <p class="orderTotal">Total: $65.00</p>
+          <button class="btnSecondary">Leave Review</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="tabPanel" id="listings">
+      <h2 class="sectionTitle">My Active Listings</h2>
+      <button class="btnPrimary addListingBtn">+ Add New Listing</button>
+      <div class="listingsContainer">
+        <div class="listingCard">
+          <img src="" alt="Listing" class="listingImage" />
+          <div class="listingInfo">
+            <h4>Vintage Band T-Shirt Collection</h4>
+            <p class="listingPrice">$45.00</p>
+            <p class="listingViews">👁️ 234 views • ❤️ 18 likes</p>
+            <div class="listingActions">
+              <button class="btnEdit">Edit</button>
+              <button class="btnDelete">Delete</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="listingCard">
+          <img src="" alt="Listing" class="listingImage" />
+          <div class="listingInfo">
+            <h4>Retro Polo Shirt - Ralph Lauren</h4>
+            <p class="listingPrice">$38.00</p>
+            <p class="listingViews">👁️ 156 views • ❤️ 12 likes</p>
+            <div class="listingActions">
+              <button class="btnEdit">Edit</button>
+              <button class="btnDelete">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    ->
+    <div class="tabPanel" id="purchases">
+      <h2 class="sectionTitle">Purchase History</h2>
+      <div class="purchasesContainer">
+        <div class="purchaseCard">
+          <img src="" alt="Purchase" class="purchaseImage" />
+          <div class="purchaseInfo">
+            <h4>Vintage Adidas Tracksuit</h4>
+            <p class="purchaseDate">Purchased: September 15, 2025</p>
+            <p class="purchasePrice">$95.00</p>
+            <button class="btnSecondary">Buy Again</button>
+          </div>
+        </div>
+
+        <div class="purchaseCard">
+          <img src="" alt="Purchase" class="purchaseImage" />
+          <div class="purchaseInfo">
+            <h4>Tommy Hilfiger Cargo Shorts</h4>
+            <p class="purchaseDate">Purchased: August 3, 2025</p>
+            <p class="purchasePrice">$42.00</p>
+            <button class="btnSecondary">Buy Again</button>
+          </div>
+        </div>
+
+        <div class="purchaseCard">
+          <img src="" alt="Purchase" class="purchaseImage" />
+          <div class="purchaseInfo">
+            <h4>Vintage Patagonia Fleece</h4>
+            <p class="purchaseDate">Purchased: July 22, 2025</p>
+            <p class="purchasePrice">$78.50</p>
+            <button class="btnSecondary">Buy Again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="tabPanel" id="messages">
+      <h2 class="sectionTitle">Messages</h2>
+      <div class="messagesContainer">
+        <div class="messageCard unread">
+          <div class="messageHeader">
+            <img src="" alt="User" class="messageAvatar" />
+            <div class="messageInfo">
+              <h4>Jessica Chen</h4>
+              <p class="messagePreview">Hi! Is the vintage Nike jacket still available?</p>
+            </div>
+            <span class="messageTime">2h ago</span>
+          </div>
+          <button class="btnReply">Reply</button>
+        </div>
+
+        <div class="messageCard">
+          <div class="messageHeader">
+            <img src="" alt="User" class="messageAvatar" />
+            <div class="messageInfo">
+              <h4>David Park</h4>
+              <p class="messagePreview">Thanks for the quick shipping! Item is perfect.</p>
+            </div>
+            <span class="messageTime">1 day ago</span>
+          </div>
+          <button class="btnReply">Reply</button>
+        </div>
+
+        <div class="messageCard">
+          <div class="messageHeader">
+            <img src="" alt="User" class="messageAvatar" />
+            <div class="messageInfo">
+              <h4>Threads & Roses Support</h4>
+              <p class="messagePreview">Your payout has been processed successfully.</p>
+            </div>
+            <span class="messageTime">3 days ago</span>
+          </div>
+          <button class="btnReply">View</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="tabPanel" id="payment">
+      <h2 class="sectionTitle">Payment Methods</h2>
+      <button class="btnPrimary addPaymentBtn">+ Add Payment Method</button>
+      <div class="paymentContainer">
+        <div class="paymentCard">
+          <div class="cardIcon">💳</div>
+          <div class="cardDetails">
+            <h4>Visa ending in 4242</h4>
+            <p>Expires 12/2026</p>
+            <span class="defaultBadge">Default</span>
+          </div>
+          <div class="cardActions">
+            <button class="btnEdit">Edit</button>
+            <button class="btnDelete">Remove</button>
+          </div>
+        </div>
+
+        <div class="paymentCard">
+          <div class="cardIcon">💳</div>
+          <div class="cardDetails">
+            <h4>Mastercard ending in 8888</h4>
+            <p>Expires 09/2027</p>
+          </div>
+          <div class="cardActions">
+            <button class="btnEdit">Edit</button>
+            <button class="btnDelete">Remove</button>
+          </div>
+        </div>
+
+        <div class="paymentCard">
+          <div class="cardIcon">🅿️</div>
+          <div class="cardDetails">
+            <h4>PayPal</h4>
+            <p>vintagelover@email.com</p>
+          </div>
+          <div class="cardActions">
+            <button class="btnEdit">Edit</button>
+            <button class="btnDelete">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer> 
+    <div class="footercontainer"> 
+      <div class="footercolumn">
+        <p class="Headers">Connect with us :</p> 
+        <div class="media">
+          <ul> 
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook_logo.png" alt="facebook logo"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="../images/instagram_logo.png" alt="instagram logo"></a></li> 
+            <li><a href="https://www.tiktok.com/" target="_blank"><img src="../images/tiktok_logo.png" alt="tiktok logo"></a></li> 
+            <li><a href="https://x.com/" target="_blank"><img src="../images/twitter_logo.png" alt="twitter logo"></a></li> 
+          </ul>
+        </div> 
+      </div> 
+      <div class="footercolumn">
+        <p class="Headers">Contact Us</p>
+        <p><strong>Email :</strong></p>
+        <p>Threads&Roses@thrifted.com</p>
+        <p><strong>Phone :</strong></p>
+        <p>+961 81 876 959</p>
+      </div>
+      <div class="footercolumn">
+        <p class="Headers">Here to help</p>
+        <p><strong>🏪 Store Hours</strong></p>
+        <p>Mon- Sat: 11 am- 8 pm</p>
+        <p>Sun: 11 am- 7 pm</p>
+        <p><strong>📍 Address</strong></p>
+        <p>lebanon test test test test test</p>
+        <p>test test test</p>
+        <p>antonine college</p>
+      </div> 
+    </div> 
+  </footer>
+
+  <script src="../javascript/main.js"></script>
+  <script src="../javascript/profile.js"></script>
+</body>
+</html>
