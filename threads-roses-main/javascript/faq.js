@@ -7,3 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+document.querySelectorAll('.faqCloud').forEach(cloud => {
+  cloud.classList.add('float-in');  //la yseero l clouds visible
+});
