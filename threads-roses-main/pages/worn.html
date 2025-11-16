@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worn Tags</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/many.css">
+    <link rel="stylesheet" href="../css/worn.css">
+</head>
+<body>
+     <nav id="navBar">
+    <ul class="menu">
+      <li><a href="../index.html#clothes">Clothing</a></li>
+      <li><a href="../pages/accessories.html">Accessories</a></li>
+      <li><a href="../index.html#housewares">Housewares</a></li>
+      <li><a href="../index.html#furniture">Furniture</a></li>
+      <li><a href="../index.html#decor">Home Decor</a></li>
+      <li><a href="../pages/worn.html">Worn</a></li>
+    </ul>
+
+    <div class="settingsBox">
+      <div class="settingsIcon">⚙️</div>
+      <div class="sideMenu">
+        <ul>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="../index.html">Shopping Cart</a></li>
+          <li><a href="../index.html">About Us</a></li>
+          <li><a href="../index.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cartBtn">
+      <a href="../index.html#cart">🛒</a>
+    </div>
+  </nav>
+
+  <div class="headersection">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../images/logo.png" alt="Logo" />
+      </a>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- Carousel Section -->
+  <style>
+    #accessoriesCarousel {
+      position: relative;
+      max-width: 1200px;
+      margin: 20px auto 40px;
+      padding: 30px;
+      background: linear-gradient(135deg, #FFF9E6 0%, #FCF5E5 100%);
+      border-radius: 20px;
+      box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(212, 175, 55, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    #accessoriesCarousel::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #D4AF37, #C9A962, #D4AF37);
+      border-radius: 22px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .carousel-header {
+      text-align: center;
+      padding: 10px 0 25px;
+    }
+
+    .carousel-header h1 {
+      color: #722F37;
+      font-size: 2.8em;
+      margin: 0 0 10px 0;
+      font-family: 'Georgia', serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      letter-spacing: 1px;
+    }
+
+    .carousel-header p {
+      color: #5A1F29;
+      font-size: 1.3em;
+      margin: 0;
+      font-style: italic;
+    }
+
+    #accessoriesCarousel .carousel-inner {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    #accessoriesCarousel .carousel-item {
+      position: relative;
+      display: none;
+      float: left;
+      width: 100%;
+      margin-right: -100%;
+      backface-visibility: hidden;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    #accessoriesCarousel .carousel-item.active {
+      display: block;
+    }
+
+    #accessoriesCarousel .carousel-inner img {
+      max-height: 600px;
+      width: 100%;
+      object-fit: contain;
+      background: linear-gradient(to bottom, #FCF5E5 0%, #FFF9E6 100%);
+      display: block;
+    }
+
+    #accessoriesCarousel .carousel-control-prev,
+    #accessoriesCarousel .carousel-control-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      padding: 0;
+      color: #D4AF37;
+      text-align: center;
+      background: linear-gradient(135deg, #722F37 0%, #5A1F29 100%);
+      border: 3px solid #D4AF37;
+      opacity: 0.85;
+      transition: all 0.3s ease;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(114, 47, 55, 0.4);
+    }
+
+    #accessoriesCarousel .carousel-control-prev {
+      left: 15px;
+    }
+
+    #accessoriesCarousel .carousel-control-next {
+      right: 15px;
+    }
+
+    #accessoriesCarousel .carousel-control-prev:hover,
+    #accessoriesCarousel .carousel-control-next:hover {
+      opacity: 1;
+      background: linear-gradient(135deg, #5A1F29 0%, #722F37 100%);
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 6px 20px rgba(114, 47, 55, 0.6);
+    }
+
+    #accessoriesCarousel .carousel-control-prev-icon,
+    #accessoriesCarousel .carousel-control-next-icon {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 100% 100%;
+    }
+
+    #accessoriesCarousel .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D4AF37'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    }
+
+    #accessoriesCarousel .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D4AF37'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    #accessoriesCarousel .carousel-indicators {
+      position: absolute;
+      right: 0;
+      bottom: -35px;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    #accessoriesCarousel .carousel-indicators button {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 14px;
+      height: 14px;
+      padding: 0;
+      margin: 0 6px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: #722F37;
+      background-clip: padding-box;
+      border: 2px solid rgba(212, 175, 55, 0.5);
+      border-radius: 50%;
+      opacity: 0.6;
+      transition: all 0.4s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    #accessoriesCarousel .carousel-indicators button:hover {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+
+    #accessoriesCarousel .carousel-indicators button.active {
+      opacity: 1;
+      background-color: #D4AF37;
+      border-color: #722F37;
+      transform: scale(1.3);
+      box-shadow: 0 3px 8px rgba(212, 175, 55, 0.5);
+    }
+
+    @media (max-width: 992px) {
+      #accessoriesCarousel {
+        padding: 25px;
+        margin: 15px auto 35px;
+      }
+      
+      #accessoriesCarousel .carousel-inner img {
+        max-height: 450px;
+      }
+
+      .carousel-header h1 {
+        font-size: 2.3em;
+      }
+    }
+
+    @media (max-width: 576px) {
+      #accessoriesCarousel {
+        padding: 20px 15px;
+        margin: 10px auto 30px;
+      }
+
+      .carousel-header h1 {
+        font-size: 1.8em;
+      }
+
+      .carousel-header p {
+        font-size: 1em;
+      }
+      
+      #accessoriesCarousel .carousel-inner img {
+        max-height: 300px;
+      }
+      
+      #accessoriesCarousel .carousel-control-prev,
+      #accessoriesCarousel .carousel-control-next {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  </style>
+
+  <div id="accessoriesCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-header">
+      <h1>Worn Tags Collection</h1>
+      <p>Authentic vintage pieces with character</p>
+    </div>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#accessoriesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#accessoriesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#accessoriesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../images/worn1.jpg" class="d-block w-100" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img src="../images/worn2.jpg" class="d-block w-100" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img src="../images/worn3.jpg" class="d-block w-100" alt="Third slide">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#accessoriesCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#accessoriesCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <script>
+    (function() {
+      const carousel = document.querySelector('#accessoriesCarousel');
+      const items = carousel.querySelectorAll('.carousel-item');
+      const indicators = carousel.querySelectorAll('.carousel-indicators button');
+      let currentIndex = 0;
+      let autoplayInterval;
+
+      function showSlide(index) {
+        items.forEach((item, i) => {
+          item.classList.toggle('active', i === index);
+        });
+        indicators.forEach((indicator, i) => {
+          indicator.classList.toggle('active', i === index);
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % items.length;
+        showSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        showSlide(currentIndex);
+      }
+
+      function goToSlide(index) {
+        currentIndex = index;
+        showSlide(currentIndex);
+        resetAutoplay();
+      }
+
+      function startAutoplay() {
+        autoplayInterval = setInterval(nextSlide, 2000);
+      }
+
+      function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        startAutoplay();
+      }
+
+      carousel.querySelector('.carousel-control-next').addEventListener('click', () => {
+        nextSlide();
+        resetAutoplay();
+      });
+
+      carousel.querySelector('.carousel-control-prev').addEventListener('click', () => {
+        prevSlide();
+        resetAutoplay();
+      });
+
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => goToSlide(index));
+      });
+
+      startAutoplay();
+    })();
+  </script>
+  <!-- end of carousel -->
+
+  <div class="worngrid">
+    <div class="worncard" datatitle="Vintage Leather Jacket" dataprice="$89.99" datadescription="Classic brown leather jacket with authentic wear patterns. Features brass zipper, two front pockets, and quilted lining. Shows beautiful patina from years of use. Size: Medium. Era: 1980s.">
+      <img src="../images/VA7.png" alt="Vintage Leather Jacket">
+      <div class="worninfo">
+        <p class="wornprice">$89.99</p>
+        <button class="morebtn">Press for More</button>
+      </div>
+    </div>
+
+    <div class="worncard" datatitle="Distressed Denim Jeans" dataprice="$45.50" datadescription="Authentic vintage Levi's 501 jeans with natural distressing and fading. Perfect broken-in feel with character marks. Original button fly. Size: 32x34. Era: 1990s.">
+      <img src="../images/worn2.jpg" alt="Distressed Denim Jeans">
+      <div class="worninfo">
+        <p class="wornprice">$45.50</p>
+        <button class="morebtn">Press for More</button>
+      </div>
+    </div>
+
+    <div class="worncard" datatitle="Worn Band T-Shirt" dataprice="$35.00" datadescription="Original concert tee from the 1995 tour. Soft, faded cotton with cracked graphics that tell a story. Single stitch construction. Size: Large. Rare collectible piece.">
+      <img src="../images/worn3.jpg" alt="Worn Band T-Shirt">
+      <div class="worninfo">
+        <p class="wornprice">$35.00</p>
+        <button class="morebtn">Press for More</button>
+      </div>
+    </div>
+
+    <div class="worncard" datatitle="Weathered Combat Boots" dataprice="$72.00" datadescription="Military-grade leather boots with authentic weathering. Steel toe, thick rubber sole with great tread remaining. Broken in perfectly. Size: 10. Era: 1980s military surplus.">
+      <img src="../images/worn4.jpg" alt="Weathered Combat Boots">
+      <div class="worninfo">
+        <p class="wornprice">$72.00</p>
+        <button class="morebtn">Press for More</button>
+      </div>
+    </div>
+
+    <div class="worncard" datatitle="Faded Flannel Shirt" dataprice="$28.99" datadescription="Soft, perfectly broken-in flannel with natural fading. Red and black plaid pattern. Pearl snap buttons. Feels like wearing a cloud. Size: Medium. Era: 1990s.">
+      <img src="../images/worn5.jpg" alt="Faded Flannel Shirt">
+      <div class="worninfo">
+        <p class="wornprice">$28.99</p>
+        <button class="morebtn">Press for More</button>
+      </div>
+    </div>
+
+    <div class="worncard" datatitle="Vintage Baseball Cap" dataprice="$22.50" datadescription="Well-loved snapback cap with curved brim and sweat stains that add character. Adjustable plastic snap closure. Perfect vintage shape. One size fits most.">
+      <img src="../images/worn6.jpg" alt="Vintage Baseball Cap">
+      <div class="worninfo">
+        <p class="wornprice">$22.50</p>
+        <button class="morebtn">Press for More</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modaloverlay" id="modalOverlay">
+    <div class="modalcontent">
+      <button class="closebtn" id="closeBtn">✕</button>
+      <img src="" alt="" id="modalImage">
+      <div class="modaldetails">
+        <h2 id="modalTitle"></h2>
+        <p class="modalprice" id="modalPrice"></p>
+        <p class="modaldescription" id="modalDescription"></p>
+        <button class="addtocartbtn" id="addToCartBtn">
+          <span class="carticon">🛒</span>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer> 
+    <div class="footercontainer"> 
+      <div class="footercolumn">
+        <p class="Headers">Connect with us :</p> 
+        <div class="media">
+          <ul> 
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook_logo.png" alt="facebook logo"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="../images/instagram_logo.png" alt="instagram logo"></a></li> 
+            <li><a href="https://www.tiktok.com/" target="_blank"><img src="../images/tiktok_logo.png" alt="tiktok logo"></a></li> 
+            <li><a href="https://x.com/" target="_blank"><img src="../images/twitter_logo.png" alt="twitter logo"></a></li> 
+          </ul>
+        </div> 
+      </div> 
+      <div class="footercolumn">
+        <p class="Headers">Contact Us</p>
+        <p><strong>Email :</strong></p>
+        <p>Threads&Roses@thrifted.com</p>
+        <p><strong>Phone :</strong></p>
+        <p>+961 81 876 959</p>
+      </div>
+      <div class="footercolumn">
+        <p class="Headers">Here to help</p>
+        <p><strong>🏪 Store Hours</strong></p>
+        <p>Mon- Sat: 11 am- 8 pm</p>
+        <p>Sun: 11 am- 7 pm</p>
+        <p><strong>📍 Address</strong></p>
+        <p>lebanon test test test test test</p>
+        <p>test test test </p>
+        <p>antonine college</p> 
+      </div> 
+    </div> 
+  </footer>
+
+  <script src="../javascript/worn.js"></script>
+  <script src="../javascript/main.js"></script>
+</body>
+</html>
