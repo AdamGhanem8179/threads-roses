@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accessories</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/many.css">
+</head>
+<body>
+    <nav id="navBar">
+        <ul class="menu">
+            <li><a href="clothing.html">Clothing</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="housewares.html">Housewares</a></li>
+            <li><a href="furniture.html">Furniture</a></li>
+            <li><a href="shoes.html">Shoes</a></li>
+            <li><a href="worn.html">Worn</a></li>
+        </ul>
+        <div class="settingsBox">
+            <div class="settingsIcon">⚙️</div>
+            <div class="sideMenu">
+                <ul>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="shoppingcart.html">Shopping Cart</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="logoBtn">
+            <a href="../index.html">
+                <img src="../images/LOGO1.svg" alt="Logo" class="navLogo" />
+            </a>
+        </div>
+    </nav>
+
+  
+  <hr/>
+
+  <!-- beginning of bootstrap -->
+  <style>
+    #accessoriesCarousel {
+      position: relative;
+      max-width: 1200px;
+      margin: 20px auto 40px;
+      padding: 30px;
+      background: linear-gradient(135deg, #FFF9E6 0%, #FCF5E5 100%);
+      border-radius: 20px;
+      box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(212, 175, 55, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    #accessoriesCarousel::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #D4AF37, #C9A962, #D4AF37);
+      border-radius: 22px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .carousel-header {
+      text-align: center;
+      padding: 10px 0 25px;
+    }
+
+    .carousel-header h1 {
+      color: #722F37;
+      font-size: 2.8em;
+      margin: 0 0 10px 0;
+      font-family: 'Georgia', serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      letter-spacing: 1px;
+    }
+
+    .carousel-header p {
+      color: #5A1F29;
+      font-size: 1.3em;
+      margin: 0;
+      font-style: italic;
+    }
+
+
+    #accessoriesCarousel .carousel-inner {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    #accessoriesCarousel .carousel-item {
+      position: relative;
+      display: none;
+      float: left;
+      width: 100%;
+      margin-right: -100%;
+      backface-visibility: hidden;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    #accessoriesCarousel .carousel-item.active {
+      display: block;
+    }
+
+    #accessoriesCarousel .carousel-inner img {
+    width: 100%;
+    height: 450px;
+    object-fit: contain; 
+    background: #FFF9E6;
+}
+
+
+    #accessoriesCarousel .carousel-control-prev,
+    #accessoriesCarousel .carousel-control-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      padding: 0;
+      color: #D4AF37;
+      text-align: center;
+      background: linear-gradient(135deg, #722F37 0%, #5A1F29 100%);
+      border: 3px solid #D4AF37;
+      opacity: 0.85;
+      transition: all 0.3s ease;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(114, 47, 55, 0.4);
+    }
+
+    #accessoriesCarousel .carousel-control-prev {
+      left: 15px;
+    }
+
+    #accessoriesCarousel .carousel-control-next {
+      right: 15px;
+    }
+
+    #accessoriesCarousel .carousel-control-prev:hover,
+    #accessoriesCarousel .carousel-control-next:hover {
+      opacity: 1;
+      background: linear-gradient(135deg, #5A1F29 0%, #722F37 100%);
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 6px 20px rgba(114, 47, 55, 0.6);
+    }
+
+    #accessoriesCarousel .carousel-control-prev-icon,
+    #accessoriesCarousel .carousel-control-next-icon {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 100% 100%;
+    }
+
+    #accessoriesCarousel .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D4AF37'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    }
+
+    #accessoriesCarousel .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D4AF37'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    #accessoriesCarousel .carousel-indicators {
+      position: absolute;
+      right: 0;
+      bottom: -35px;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    #accessoriesCarousel .carousel-indicators button {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 14px;
+      height: 14px;
+      padding: 0;
+      margin: 0 6px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: #722F37;
+      background-clip: padding-box;
+      border: 2px solid rgba(212, 175, 55, 0.5);
+      border-radius: 50%;
+      opacity: 0.6;
+      transition: all 0.4s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    #accessoriesCarousel .carousel-indicators button:hover {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+
+    #accessoriesCarousel .carousel-indicators button.active {
+      opacity: 1;
+      background-color: #D4AF37;
+      border-color: #722F37;
+      transform: scale(1.3);
+      box-shadow: 0 3px 8px rgba(212, 175, 55, 0.5);
+    }
+
+    @media (max-width: 992px) {
+      #accessoriesCarousel {
+        padding: 25px;
+        margin: 15px auto 35px;
+      }
+      
+      
+      #accessoriesCarousel .carousel-inner img {
+        max-height: 450px;
+      }
+
+
+ 
+      .carousel-header h1 {
+        font-size: 2.3em;
+      }
+    }
+
+    @media (max-width: 576px) {
+      #accessoriesCarousel {
+        padding: 20px 15px;
+        margin: 10px auto 30px;
+      }
+
+      .carousel-header h1 {
+        font-size: 1.8em;
+      }
+
+      .carousel-header p {
+        font-size: 1em;
+      }
+      
+      #accessoriesCarousel .carousel-inner img {
+        max-height: 300px;
+      }
+      
+      #accessoriesCarousel .carousel-control-prev,
+      #accessoriesCarousel .carousel-control-next {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  </style>
+
+  <div id="accessoriesCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-header">
+      <h1>Vintage Accessories Collection</h1>
+      <p>Discover timeless pieces to complete your look</p>
+    </div>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#accessoriesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#accessoriesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#accessoriesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../images/accessoriesmodel1.webp" class="d-block w-100" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img src="../images/accessoriesmodel2.webp" class="d-block w-100" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img src="../images/accessoriesmodel3.webp" class="d-block w-100" alt="Third slide">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#accessoriesCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#accessoriesCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <script>
+    (function() {
+      const carousel = document.querySelector('#accessoriesCarousel');
+      const items = carousel.querySelectorAll('.carousel-item');
+      const indicators = carousel.querySelectorAll('.carousel-indicators button');
+      let currentIndex = 0;
+      let autoplayInterval;
+
+      function showSlide(index) {
+        items.forEach((item, i) => {
+          item.classList.toggle('active', i === index);
+        });
+        indicators.forEach((indicator, i) => {
+          indicator.classList.toggle('active', i === index);
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % items.length;
+        showSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        showSlide(currentIndex);
+      }
+
+      function goToSlide(index) {
+        currentIndex = index;
+        showSlide(currentIndex);
+        resetAutoplay();
+      }
+
+      function startAutoplay() {
+        autoplayInterval = setInterval(nextSlide, 2000);
+      }
+
+      function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        startAutoplay();
+      }
+
+      carousel.querySelector('.carousel-control-next').addEventListener('click', () => {
+        nextSlide();
+        resetAutoplay();
+      });
+
+      carousel.querySelector('.carousel-control-prev').addEventListener('click', () => {
+        prevSlide();
+        resetAutoplay();
+      });
+
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => goToSlide(index));
+      });
+
+      startAutoplay();
+    })();
+  </script>
+  <!-- end of bootstrap -->
+
+    <div class="grid">
+        <div class="griditem">
+            <div class="salebanner">15% OFF</div>
+            <img src="../images/Accessory1.webp" alt="Sparkling Burgundy Earrings">
+            <div class="iteminfo">
+                <h3 class="itemtitle">Sparkling Burgundy Earrings</h3>
+                <p class="itemprice">$45.99 <span class="originalprice">$54.00</span></p>
+                <p class="itemdescription">Elegant beaded drop earrings featuring deep burgundy tones with a touch of sparkle...</p>
+                <p class="itemdescriptionfull">Elegant beaded drop earrings featuring deep burgundy tones with a touch of sparkle. Perfect for evening events and special occasions. Handcrafted with attention to detail.</p>
+            <button class="addtocartbtn">Add to Cart</button>
+              </div>
+        </div>
+
+        <div class="griditem">
+            <div class="salebanner">20% OFF</div>
+            <img src="../images/Accessory2.webp" alt="Gold Lion Statement Earrings">
+            <div class="iteminfo">
+                <h3 class="itemtitle">Gold Lion Statement Earrings</h3>
+                <p class="itemprice">$38.40 <span class="originalprice">$48.00</span></p>
+                <p class="itemdescription">Bold vintage-inspired earrings with iconic lion head design and circular drops...</p>
+                <p class="itemdescriptionfull">Bold vintage-inspired earrings with iconic lion head design and circular drops. Made from gold-tone metal, these statement pieces add a touch of luxury to any outfit.</p>
+            <button class="addtocartbtn">Add to Cart</button>
+              </div>
+        </div>
+
+        <div class="griditem">
+            <div class="salebanner">10% OFF</div>
+            <img src="../images/accessory3.webp" alt="Vintage Gucci Watch">
+            <div class="iteminfo">
+                <h3 class="itemtitle">Vintage Gucci Watch</h3>
+                <p class="itemprice">$225.00 <span class="originalprice">$250.00</span></p>
+                <p class="itemdescription">Classic rectangular Gucci timepiece with silver-tone bracelet and elegant cream dial...</p>
+                <p class="itemdescriptionfull">Classic rectangular Gucci timepiece with silver-tone bracelet and elegant cream dial. A timeless accessory that combines Italian luxury with everyday functionality. Vintage condition.</p>
+            <button class="addtocartbtn">Add to Cart</button>
+              </div>
+        </div>
+
+        <div class="griditem">
+            <div class="salebanner">60% OFF</div>
+            <img src="../images/accessorie 4.webp" alt="Dragon Scale Bracelet">
+            <div class="iteminfo">
+                <h3 class="itemtitle">Dragon Scale Bracelet</h3>
+                <p class="itemprice">$28.00 <span class="originalprice">$70.00</span></p>
+                <p class="itemdescription">Intricate silver-tone bracelet featuring detailed dragon scale pattern with magnetic clasp...</p>
+                <p class="itemdescriptionfull">Intricate silver-tone bracelet featuring detailed dragon scale pattern with magnetic clasp. Bold and edgy design perfect for those who love unique statement jewelry pieces.</p>
+            <button class="addtocartbtn">Add to Cart</button>
+              </div>
+        </div>
+
+        <div class="griditem">
+            <div class="salebanner">70% OFF</div>
+            <img src="../images/accessorie 5.webp" alt="Byzantine Chain Bracelet">
+            <div class="iteminfo">
+                <h3 class="itemtitle">Byzantine Chain Bracelet</h3>
+                <p class="itemprice">$21.00 <span class="originalprice">$70.00</span></p>
+                <p class="itemdescription">Heavy-duty silver chain bracelet with intricate Byzantine weave pattern...</p>
+                <p class="itemdescriptionfull">Heavy-duty silver chain bracelet with intricate Byzantine weave pattern. Features detailed metalwork and a substantial weight that speaks to quality craftsmanship. Unisex design.</p>
+           <button class="addtocartbtn">Add to Cart</button>
+              </div>
+        </div>
+
+        <div class="griditem">
+            <div class="salebanner">25% OFF</div>
+            <img src="../images/accessorie 6.webp" alt="Leather Snake Bracelet">
+            <div class="iteminfo">
+                <h3 class="itemtitle">Leather Snake Bracelet</h3>
+                <p class="itemprice">$33.75 <span class="originalprice">$45.00</span></p>
+                <p class="itemdescription">Braided black leather bracelet with detailed snake head clasp in antique silver...</p>
+                <p class="itemdescriptionfull">Braided black leather bracelet with detailed snake head clasp in antique silver. Combines edgy style with comfortable wear. Perfect for casual and rock-inspired looks.</p>
+            <button class="addtocartbtn">Add to Cart</button>
+              </div>
+        </div>
+        </div>
+
+ <footer>
+        <div class="footercontainer">
+            <div class="footercolumn">
+                <p class="Headers">Connect with us</p>
+                <div class="media">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook_logo.webp" alt="facebook logo">
+                            </a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><img src="../images/instagram_logo.webp" alt="instagram logo"></a></li>
+                        <li><a href="https://www.tiktok.com/" target="_blank"><img src="../images/tiktok_logo.webp" alt="tiktok logo"></a>
+                        </li>
+                        <li><a href="https://x.com/" target="_blank"><img src="../images/twitter_logo.webp" alt="twitter logo"></a></li>
+                    </ul>
+                </div>
+                <p style="margin-top: 1.5em;">Follow us for daily vintage finds and exclusive drops!</p>
+            </div>
+            <div class="footercolumn">
+                <p class="Headers">Contact Us</p>
+                <p><strong>Email:</strong></p>
+                <p><a href="mailto:Threads&Roses@thrifted.com">Threads&Roses@thrifted.com</a></p>
+                <p><strong>Phone:</strong></p>
+                <p><a href="tel:+96181876959">+961 81 876 959</a></p>
+            </div>
+            <div class="footercolumn">
+                <p class="Headers">Store Info</p>
+                <p><strong>🏪 Store Hours</strong></p>
+                <p>Mon-Sat: 11 am-8 pm</p>
+                <p>Sun: 11 am-7 pm</p>
+                <p><strong>📍 Address</strong></p>
+                <p>lebanon test test test test test</p>
+                <p>test test test</p>
+                <p>antonine college</p>
+            </div>
+            <div class="footercolumn">
+                <p class="Headers">Quick Links</p>
+                <ul>
+                   
+                    <li><a href="clothing.html">Shop Clothing</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="shoppingcart.html">Shopping Cart</a></li>
+                </ul>
+                <p style="margin-top: 1.5em;"><strong>📧 Newsletter</strong></p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footerbottom">
+            <p>&copy; 2024 Threads & Roses. All rights reserved. | Sustainable Vintage Fashion</p>
+        </div>
+    </footer>
+  <script src="../javascript/main.js"></script>
+</body>

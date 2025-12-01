@@ -1,0 +1,271 @@
+body {
+  background: #F5E6D3;
+}
+
+.worngrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  padding: 40px 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.worncard {
+  background: linear-gradient(135deg, #FFF9E6 0%, #FFFBF0 100%);
+  border: 6px solid #D4AF37;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 
+    0 8px 20px rgba(212, 175, 55, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.worncard:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 16px 32px rgba(212, 175, 55, 0.4),
+    0 4px 12px rgba(114, 47, 55, 0.2);
+  border-color: #C9A962;
+}
+
+.worncard img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.worncard:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.worninfo {
+  padding: 15px 5px 5px;
+  text-align: center;
+}
+
+.wornprice {
+  color: #722F37;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 0 0 12px 0;
+  font-family: 'Georgia', serif;
+}
+
+.morebtn {
+  background: linear-gradient(135deg, #722F37 0%, #5A1F29 100%);
+  color: #D4AF37;
+  border: 2px solid #D4AF37;
+  padding: 10px 28px;
+  border-radius: 25px;
+  font-size: 0.95em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(114, 47, 55, 0.3);
+}
+
+.morebtn:hover {
+  background: linear-gradient(135deg, #5A1F29 0%, #722F37 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(114, 47, 55, 0.4);
+}
+
+.modaloverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modaloverlay.active {
+  display: flex;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  opacity: 1;
+}
+
+.modalcontent {
+  background: linear-gradient(135deg, #FFF9E6 0%, #FFFBF0 100%);
+  border: 8px solid #D4AF37;
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(212, 175, 55, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transform: scale(0.7) translateY(-50px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modaloverlay.active .modalcontent {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #722F37 0%, #5A1F29 100%);
+  color: #D4AF37;
+  border: 3px solid #D4AF37;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(114, 47, 55, 0.4);
+  z-index: 10;
+}
+
+.modalcontent img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.modaldetails {
+  text-align: center;
+}
+
+.modaldetails h2 {
+  color: #722F37;
+  font-size: 2.2em;
+  margin: 0 0 15px 0;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+}
+
+.modalprice {
+  color: #5A1F29;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 15px 0 20px 0;
+  font-family: 'Georgia', serif;
+}
+
+.modaldescription {
+  color: #555;
+  font-size: 1.1em;
+  line-height: 1.8;
+  text-align: left;
+  padding: 0 10px;
+  margin: 20px 0 25px 0;
+}
+
+.addtocartbtn {
+  background: linear-gradient(135deg, #D4AF37 0%, #C9A962 100%);
+  color: #722F37;
+  border: 3px solid #722F37;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: none;
+}
+
+@media (max-width: 992px) {
+  .worngrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .modalcontent {
+    padding: 35px;
+    max-width: 85%;
+  }
+
+  .modaldetails h2 {
+    font-size: 1.9em;
+  }
+
+  .modalprice {
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 576px) {
+  .worngrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 30px 20px;
+  }
+
+  .worncard img {
+    height: 280px;
+  }
+
+  .wornprice {
+    font-size: 1.5em;
+  }
+
+  .morebtn {
+    padding: 9px 24px;
+    font-size: 0.9em;
+  }
+
+  .modalcontent {
+    padding: 30px 25px;
+    max-width: 95%;
+    max-height: 90vh;
+  }
+
+  .modaldetails h2 {
+    font-size: 1.6em;
+  }
+
+  .modalprice {
+    font-size: 1.5em;
+  }
+
+  .modaldescription {
+    font-size: 1em;
+  }
+
+  .addtocartbtn {
+    padding: 12px 32px;
+    font-size: 1em;
+  }
+
+  .closebtn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3em;
+    top: 15px;
+    right: 15px;
+  }
+}

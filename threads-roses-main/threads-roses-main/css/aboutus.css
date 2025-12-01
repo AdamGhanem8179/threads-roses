@@ -1,0 +1,140 @@
+body {
+  background: #F5E6D3;
+  font-family: "Times New Roman", serif;
+}
+
+
+.aboutHeader {
+  text-align: center;
+  margin-top: 8em;
+  padding: 2em;
+  color: #722F37;
+}
+
+
+
+.aboutHeader h1 {
+  font-size: 2.8em;
+  margin-bottom: 0.5em;
+  color: #722F37;
+}
+
+.aboutHeader p {
+  font-size: 1.2em;
+  color: #5A1F29;
+}
+
+.ourStory {
+  display: flex;
+  gap: 3em;
+  align-items: center;
+  background: #FFF9E6;
+  margin: 3em 2em;
+  padding: 2em;
+  border-radius: 0.5em;
+}
+
+.storyText {
+  flex: 1;
+  color: #5A1F29;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.storyText h1 {
+  color: #722F37;
+  margin-bottom: 1em;
+}
+
+.storyImage img {
+  width: 50%;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  float: right;
+}
+
+
+.ourMission {
+  text-align: center;
+  margin: 3em 2em;
+}
+
+.ourMission h2 {
+  color: #722F37;
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+.ourMission p {
+  color: #5A1F29;
+  font-size: 1.1em;
+  margin-top:2em;
+  margin-bottom:1em;
+  line-height: 1.7;
+}
+
+.missionText {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.missionCard {
+  background: #FFF9E6;
+  border-left: 4px solid #D4AF37;
+  padding: 1.5em;
+  border-radius: 0.5em;
+  width: 18em;
+  box-shadow: 0 4px 10px rgba(114,47,55,0.3);
+  transition: transform 0.3s;
+}
+
+.missionCard:hover {
+  transform: scale(1.05);
+}
+
+.missionCard h3 {
+  color: #722F37;
+  margin-bottom: 0.5em;
+}
+
+
+.team {
+  background: #FFF9E6;
+  padding: 3em 2em;
+  margin: 3em 2em;
+  text-align: center;
+  border-radius: 0.5em;
+}
+
+.team h2 {
+  color: #722F37;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.teamContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.teamMember {
+  background: #FCF5E5;
+  padding: 1.5em;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 10px rgba(114,47,55,0.3);
+  width: 15em;
+}
+
+
+.teamMember h4 {
+  color: #722F37;
+  margin-bottom: 0.3em;
+}
+
+.teamMember p {
+  color: #5A1F29;
+}

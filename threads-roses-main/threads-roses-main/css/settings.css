@@ -1,0 +1,689 @@
+/* for the slider ai was used */
+.settingsHeader {
+  text-align: center;
+  margin: 4em auto;
+  max-width: 75em;
+}
+
+.settingsHeader h1 {
+  font-size: 2.5em;
+  color: #722F37;
+  margin-bottom: 0.5em;
+}
+
+.profileLink {
+  color: #D4AF37;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.profileLink:hover {
+  color: #F4D03F;
+}
+
+.settingsNav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin: 2em;
+  background: #FFF9E6;
+  padding: 1.5em;
+  border-radius: 0.5em;
+}
+
+.settingsTab {
+  padding: 0.8em 1.5em;
+  background: transparent;
+  border: 0.125em solid #722F37;
+  color: #722F37;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.settingsTab:hover {
+  background: #722F37;
+  color: #D4AF37;
+  transform: translateY(-0.125em);
+}
+
+.settingsTab.active {
+  background: #722F37;
+  color: #D4AF37;
+}
+
+.settingsContent {
+  max-width: 62.5em;
+  margin: 0 auto 3em;
+  padding: 0 2em;
+}
+
+.settingsSection {
+  display: none;
+  background: #FFF9E6;
+  padding: 2.5em;
+  border-radius: 0.8em;
+  margin-bottom: 2em;
+}
+
+.settingsSection.active {
+  display: block;
+  animation: fadeIn 0.5s;
+}
+
+.settingsSection h2 {
+  font-size: 2em;
+  color: #722F37;
+  margin-bottom: 1.5em;
+  border-bottom: 0.125em solid #D4AF37;
+  padding-bottom: 0.5em;
+}
+
+.settingsSection h3 {
+  font-size: 1.5em;
+  color: #722F37;
+  margin: 2em 0 1em;
+}
+
+.formGroup {
+  margin-bottom: 1.5em;
+}
+
+.formGroup label {
+  display: block;
+  color: #722F37;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup input[type="tel"],
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.8em;
+  border: 0.125em solid #722F37;
+  border-radius: 0.5em;
+  font-size: 1em;
+  background: #FFFEF0;
+  color: #722F37;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #D4AF37;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 6em;
+}
+
+.profilePicSection {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 1.5em;
+  background: #FCF5E5;
+  border-radius: 0.5em;
+}
+
+.settingsPic {
+  width: 6.25em;
+  height: 6.25em;
+  border-radius: 50%;
+  border: 0.25em solid #722F37;
+  object-fit: cover;
+}
+
+.picButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.btnChange,
+.btnRemove {
+  padding: 0.7em 1.5em;
+  border: 0.125em solid #722F37;
+  background: transparent;
+  color: #722F37;
+  font-weight: bold;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1em;
+}
+
+.btnChange:hover {
+  background: #722F37;
+  color: #D4AF37;
+}
+
+.btnRemove {
+  border-color: #8B0000;
+  color: #8B0000;
+}
+
+.btnRemove:hover {
+  background: #8B0000;
+  color: #FFF;
+}
+
+.verifyBadge {
+  display: inline-block;
+  background: #6B8E23;
+  color: #FFF;
+  padding: 0.4em 0.8em;
+  border-radius: 1em;
+  font-size: 0.85em;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+.verifyBadge.pending {
+  background: #D4AF37;
+  color: #722F37;
+}
+
+/* Info Box */
+.infoBox {
+  background: #FCF5E5;
+  padding: 1.2em;
+  border-radius: 0.5em;
+  border-left: 0.25em solid #D4AF37;
+  margin-bottom: 1.5em;
+}
+
+.infoBox p {
+  color: #5A1F29;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.complaintForm {
+  background: #FCF5E5;
+  padding: 2em;
+  border-radius: 0.8em;
+  margin: 1.5em 0;
+}
+
+.complaintForm.hidden {
+  display: none;
+}
+
+.complaintForm h3 {
+  color: #722F37;
+  margin-top: 0;
+}
+
+.formActions {
+  display: flex;
+  gap: 1em;
+  margin-top: 1.5em;
+}
+
+.complaintHistory {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.complaintCard {
+  background: #FCF5E5;
+  padding: 1.5em;
+  border-radius: 0.8em;
+  border-left: 0.25em solid #722F37;
+}
+
+.complaintHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.complaintId {
+  font-weight: bold;
+  color: #722F37;
+}
+
+.complaintStatus {
+  padding: 0.4em 0.8em;
+  border-radius: 1em;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.complaintStatus.resolved {
+  background: #6B8E23;
+  color: #FFF;
+}
+
+.complaintStatus.pending {
+  background: #D4AF37;
+  color: #722F37;
+}
+
+.complaintDate,
+.complaintCategory,
+.complaintDesc {
+  color: #5A1F29;
+  margin: 0.5em 0;
+}
+
+.complaintResponse {
+  background: #FFFEF0;
+  padding: 1em;
+  border-radius: 0.5em;
+  margin: 1em 0;
+  color: #722F37;
+}
+
+.toggleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.toggleItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2em;
+  background: #FCF5E5;
+  border-radius: 0.5em;
+}
+
+.toggleLabel span {
+  display: block;
+  color: #722F37;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+.toggleDesc {
+  color: #5A1F29;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 3.75em;
+  height: 2em;
+  flex-shrink: 0;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 2em;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.5em;
+  left: 0.25em;
+  bottom: 0.25em;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #722F37;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.75em);
+}
+
+.walletBalance {
+  background: #FCF5E5;
+  padding: 2em;
+  border-radius: 0.8em;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.walletBalance h3 {
+  color: #722F37;
+  margin-top: 0;
+}
+
+.balance {
+  font-size: 3em;
+  font-weight: bold;
+  color: #D4AF37;
+  margin: 0.5em 0;
+}
+
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.paymentItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1.5em;
+  background: #FCF5E5;
+  border-radius: 0.8em;
+}
+
+.paymentIcon {
+  font-size: 2.5em;
+}
+
+.paymentDetails {
+  flex: 1;
+}
+
+.paymentDetails strong {
+  display: block;
+  color: #722F37;
+  margin-bottom: 0.3em;
+}
+
+.paymentDetails p {
+  color: #5A1F29;
+  margin: 0;
+}
+
+.defaultBadge {
+  background: #D4AF37;
+  color: #722F37;
+  padding: 0.4em 0.8em;
+  border-radius: 1em;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.addressCard {
+  background: #FCF5E5;
+  padding: 1.5em;
+  border-radius: 0.8em;
+  margin-bottom: 1.5em;
+}
+
+.addressCard p {
+  color: #5A1F29;
+  margin: 0.5em 0;
+}
+
+.addressCard strong {
+  color: #722F37;
+}
+
+.addressActions {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 1.5em;
+  flex-wrap: wrap;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  padding: 0.8em 1.5em;
+  background: #FCF5E5;
+  border: 0.125em solid #722F37;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.radioOption:hover {
+  background: #722F37;
+  color: #D4AF37;
+}
+
+.radioOption input[type="radio"] {
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+
+.sessionsList,
+.blockedList {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.sessionItem,
+.blockedItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1.5em;
+  background: #FCF5E5;
+  border-radius: 0.8em;
+}
+
+.sessionInfo,
+.blockedInfo {
+  flex: 1;
+}
+
+.sessionInfo strong,
+.blockedInfo strong {
+  display: block;
+  color: #722F37;
+  margin-bottom: 0.3em;
+}
+
+.sessionInfo p,
+.blockedInfo p {
+  color: #5A1F29;
+  margin: 0.3em 0;
+  font-size: 0.9em;
+}
+
+.currentBadge {
+  background: #6B8E23;
+  color: #FFF;
+  padding: 0.4em 0.8em;
+  border-radius: 1em;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.blockedAvatar {
+  width: 3.125em;
+  height: 3.125em;
+  border-radius: 50%;
+  border: 0.125em solid #722F37;
+}
+
+
+.starRating {
+  display: flex;
+  gap: 0.5em;
+  font-size: 2em;
+  margin: 1em 0;
+}
+
+.star {
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.star:hover,
+.star.active {
+  opacity: 1;
+}
+
+.ratingText {
+  color: #5A1F29;
+  font-style: italic;
+  margin-top: 0.5em;
+}
+
+
+.dangerZone {
+  border: 0.125em solid #8B0000 !important;
+  background: #FFF5F5 !important;
+}
+
+.dangerZone h2 {
+  color: #8B0000;
+  border-bottom-color: #8B0000;
+}
+
+.warningBox {
+  background: #FFE6E6;
+  border-left: 0.25em solid #8B0000;
+  padding: 1.2em;
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+}
+
+.warningBox p {
+  color: #8B0000;
+  margin: 0;
+}
+
+.dangerAction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em;
+  background: #FFF;
+  border: 0.125em solid #8B0000;
+  border-radius: 0.8em;
+  margin-bottom: 1.5em;
+}
+
+.dangerInfo h3 {
+  color: #8B0000;
+  margin: 0 0 0.5em;
+  font-size: 1.2em;
+}
+
+.dangerInfo p {
+  color: #5A1F29;
+  margin: 0;
+}
+
+.btnDanger {
+  padding: 0.8em 2em;
+  background: #8B0000;
+  color: #FFF;
+  border: none;
+  border-radius: 0.5em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1em;
+}
+
+.btnDanger:hover {
+  background: #660000;
+  transform: translateY(-0.125em);
+}
+
+
+.btnPrimary,
+.btnSecondary {
+  padding: 0.8em 2em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+}
+
+.btnPrimary {
+  background: #722F37;
+  color: #D4AF37;
+}
+
+.btnPrimary:hover {
+  background: #5A1F29;
+  transform: translateY(-0.125em);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #722F37;
+  border: 0.125em solid #722F37;
+}
+
+.btnSecondary:hover {
+  background: #722F37;
+  color: #D4AF37;
+}
+
+.saveBtn {
+  margin-top: 2em;
+  display: block;
+  margin-left: auto;
+}
+
+
+@media (max-width: 48em) {
+  .settingsNav {
+    flex-direction: column;
+  }
+
+  .profilePicSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .radioGroup {
+    flex-direction: column;
+  }
+
+  .dangerAction {
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+  }
+
+  .paymentItem,
+  .sessionItem,
+  .blockedItem {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .formActions {
+    flex-direction: column;
+  }
+}

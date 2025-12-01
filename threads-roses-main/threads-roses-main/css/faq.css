@@ -1,0 +1,143 @@
+.faqContainer {
+  max-width: 75em;
+  margin: 3em auto;
+  padding: 2em;
+}
+
+.faqHeader {
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+.faqTitle {
+  font-size: 3em;
+  color: #722F37;
+  margin-bottom: 0.5em;
+}
+
+.faqSubtitle {
+  font-size: 1.3em;
+  color: #5A1F29;
+}
+
+.faqCloud {
+  background: #FFF9E6;
+  border-radius: 3em;
+  padding: 2.5em;
+  margin-bottom: 3em;
+  position: relative;
+}
+
+.faqCloud::before {
+  content: '';
+  position: absolute;
+  bottom: -1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2em;
+  height: 2em;
+  background: #FFF9E6;
+  border-radius: 50%;
+}
+
+.cloudContent {
+  text-align: center;
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+}
+
+.cloudTitle {
+  font-size: 2em;
+  color: #722F37;
+  margin-bottom: 0.5em;
+}
+
+.cloudText {
+  font-size: 1.1em;
+  color: #5A1F29;
+  line-height: 1.6;
+}
+
+.faqItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.faqItem {
+  background: #FFFEF8;
+  border-radius: 1em;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.faqItem:hover {
+  border-color: #D4AF37;
+}
+
+.faqQuestion {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #722F37;
+  padding: 1.2em 1.5em;
+  background: #FCF5E5;
+  position: relative;
+}
+
+.faqQuestion::after {
+  content: '▼';
+  position: absolute;
+  right: 1.5em;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  color: #D4AF37;
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+.faqItem.active .faqQuestion::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faqAnswer {
+  padding: 0 1.5em;
+  max-height: 0;
+  overflow: hidden;
+  color: #5A1F29;
+  font-size: 1.05em;
+  transition: all 0.4s ease;
+}
+
+.faqItem.active .faqAnswer {
+  padding: 1.5em;
+  max-height: 20em;
+}
+
+@media (max-width: 768px) {
+  .faqTitle {
+    font-size: 2em;
+  }
+  
+  .faqSubtitle {
+    font-size: 1em;
+  }
+  
+  .cloudTitle {
+    font-size: 1.5em;
+  }
+  
+  .faqCloud {
+    padding: 1.5em;
+  }
+  
+  .faqQuestion {
+    font-size: 1em;
+    padding: 1em;
+  }
+  
+  .faqAnswer {
+    font-size: 0.95em;
+  }
+}

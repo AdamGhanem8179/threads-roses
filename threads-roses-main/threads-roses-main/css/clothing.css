@@ -1,0 +1,201 @@
+body {
+  background: #F5E6D3;
+}
+
+
+
+
+
+
+
+
+.clothingHeader{
+  text-align: center;
+  padding: 2em;
+  color: #722F37;
+  font-size: 1.75em;
+}
+
+
+
+/* GRID */
+.clothinggrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  padding: 40px 30px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.clothingcard {
+  background: linear-gradient(135deg, #FFF9E6, #FFFBF0);
+  border: 6px solid #D4AF37;
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(212,175,55,0.3);
+}
+
+.clothingcard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(212,175,55,0.4);
+}
+
+.clothingcard img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* PRICE + BUTTON */
+.clothinginfo {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.clothingprice , 
+.clothingTitle {
+  color: #722F37;
+  font-size: 1.8em;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.clothingTitle{
+ font-size: 1em;
+
+}
+
+
+
+/* SAME BUTTON AS WORN PAGE */
+.morebtn {
+  background: linear-gradient(135deg, #722F37, #5A1F29);
+  color: #D4AF37;
+  border: 2px solid #D4AF37;
+  padding: 10px 28px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.morebtn:hover {
+  transform: translateY(-2px);
+}
+
+/* MODAL (100% COPIED FROM WORN PAGE FOR CONSISTENCY) */
+.modaloverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  backdrop-filter: blur(0px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.modaloverlay.active {
+  display: flex;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.85);
+  opacity: 1;
+}
+
+.modalcontent {
+  background: linear-gradient(135deg, #FFF9E6, #FFFBF0);
+  border: 8px solid #D4AF37;
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  transform: scale(0.7);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.modaloverlay.active .modalcontent {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #722F37, #5A1F29);
+  color: #D4AF37;
+  border: 3px solid #D4AF37;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5em;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+
+.modalcontent img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.modaldetails {
+  text-align: center;
+}
+
+.modaldetails h2 {
+  font-size: 2.2em;
+  color: #722F37;
+}
+
+.modalprice {
+  font-size: 2em;
+  color: #5A1F29;
+  font-weight: bold;
+  
+}
+
+/* RESPONSIVE GRID */
+@media (max-width: 992px) {
+  .clothinggrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .clothinggrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.addtocartbtn{
+background: linear-gradient(135deg, #D4AF37 0%, #C9A962 100%);
+  color: #722F37;
+  border: 3px solid #722F37;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.addtocartbtn:hover{
+  transform: translateY(-3px);
+}

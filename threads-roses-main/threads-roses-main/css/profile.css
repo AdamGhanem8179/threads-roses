@@ -1,0 +1,589 @@
+
+.profileHeader {
+  background: #FFF9E6;
+  padding: 3em 2em;
+  text-align: center;
+  margin: 3em;
+  border-radius: 1em;
+
+}
+
+.profilePhotoContainer {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5em;
+}
+
+.profilePhoto {
+  width: 9.375em;
+  height: 9.375em;
+  border-radius: 50%;
+  border: 0.3125em solid #722F37;
+  object-fit: cover;
+ 
+}
+
+.profileUsername {
+  font-size: 2em;
+  color: #722F37;
+  margin-bottom: 0.5em;
+}
+
+.profileBio {
+  color: #5A1F29;
+  font-size: 1.1em;
+  max-width: 37.5em;
+  margin: 0 auto 2em;
+  line-height: 1.6;
+}
+
+.profileStats {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  flex-wrap: wrap;
+}
+
+.statBox {
+  text-align: center;
+  min-width: 6.25em;
+}
+
+.statBox h3 {
+  font-size: 2em;
+  color: #722F37;
+  margin-bottom: 0.2em;
+}
+
+.statBox p {
+  color: #5A1F29;
+  font-size: 0.95em;
+}
+
+
+.profileTabs {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 2em;
+  flex-wrap: wrap;
+  background: #FFF9E6;
+  padding: 1.5em;
+  border-radius: 0.5em;
+}
+
+.tabBtn {
+  padding: 0.8em 1.8em;
+  background: transparent;
+  border: 0.125em solid #722F37;
+  color: #722F37;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tabBtn:hover {
+  background: #722F37;
+  color: #D4AF37;
+  transform: translateY(-0.125em);
+}
+
+.tabBtn.active {
+  background: #722F37;
+  color: #D4AF37;
+}
+
+
+.tabContent {
+  margin: 2em;
+}
+
+.tabPanel {
+  display: none;
+  animation: fadeIn 0.5s;
+}
+
+.tabPanel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(0.625em); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sectionTitle {
+  font-size: 2em;
+  color: #722F37;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+
+.reviewsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  max-width: 62.5em;
+  margin: 0 auto;
+}
+
+.reviewCard {
+  background: #FFF9E6;
+  padding: 2em;
+  border-radius: 0.8em;
+  border-left: 0.25em solid #D4AF37;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.reviewCard:hover {
+  transform: translateY(-0.25em);
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.reviewerPhoto {
+  width: 3.125em;
+  height: 3.125em;
+  border-radius: 50%;
+  border: 0.125em solid #722F37;
+}
+
+.reviewerInfo {
+  flex: 1;
+}
+
+.reviewerInfo h4 {
+  color: #722F37;
+  margin-bottom: 0.3em;
+}
+
+.stars {
+  color: #D4AF37;
+  font-size: 1.1em;
+}
+
+.reviewDate {
+  color: #5A1F29;
+  font-size: 0.9em;
+}
+
+.reviewText {
+  color: #5A1F29;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+
+.ordersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  max-width: 62.5em;
+  margin: 0 auto;
+}
+
+.orderCard {
+  background: #FFF9E6;
+  padding: 2em;
+  border-radius: 0.8em;
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.orderHeader h4 {
+  color: #722F37;
+  font-size: 1.2em;
+}
+
+.orderStatus {
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.orderStatus.shipped {
+  background: #D4AF37;
+  color: #722F37;
+}
+
+.orderStatus.delivered {
+  background: #6B8E23;
+  color: #FFF;
+}
+
+.orderDate {
+  color: #5A1F29;
+  margin-bottom: 1em;
+}
+
+.orderItems {
+  background: #FCF5E5;
+  padding: 1em;
+  border-radius: 0.5em;
+  margin: 1em 0;
+}
+
+.orderItems p {
+  color: #722F37;
+  margin: 0.5em 0;
+}
+
+.orderTotal {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #722F37;
+  margin: 1em 0;
+}
+
+.orderTracking {
+  background: #FCF5E5;
+  padding: 1em;
+  border-radius: 0.5em;
+  margin: 1em 0;
+}
+
+.orderTracking p {
+  color: #5A1F29;
+  margin: 0.3em 0;
+}
+
+.btnTrack {
+  background: #722F37;
+  color: #D4AF37;
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 0.5em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1em;
+}
+
+.btnTrack:hover {
+  background: #5A1F29;
+  transform: translateY(-2px);
+}
+
+
+.listingsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18.75em, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.addListingBtn {
+  margin-bottom: 2em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.listingCard {
+  background: #FFF9E6;
+  border-radius: 0.8em;
+  overflow: hidden;
+  box-shadow: 0 0.125em 0.5em rgba(114, 47, 55, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.listingCard:hover {
+  transform: translateY(-0.25em);
+  box-shadow: 0 0.375em 1em rgba(114, 47, 55, 0.2);
+}
+
+.listingImage {
+  width: 100%;
+  height: 15.625em;
+  object-fit: cover;
+}
+
+.listingInfo {
+  padding: 1.5em;
+}
+
+.listingInfo h4 {
+  color: #722F37;
+  margin-bottom: 0.5em;
+}
+
+.listingPrice {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #D4AF37;
+  margin: 0.5em 0;
+}
+
+.listingViews {
+  color: #5A1F29;
+  font-size: 0.9em;
+  margin: 1em 0;
+}
+
+.listingActions {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.btnEdit,.btnDelete {
+  flex: 1;
+  padding: 0.7em;
+  border: 0.125em solid #722F37;
+  background: transparent;
+  color: #722F37;
+  font-weight: bold;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btnEdit:hover {
+  background: #722F37;
+  color: #D4AF37;
+}
+
+.btnDelete {
+  border-color: #8B0000;
+  color: #8B0000;
+}
+
+.btnDelete:hover {
+  background: #8B0000;
+  color: #FFF;
+}
+
+
+.purchasesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  max-width: 62.5em;
+  margin: 0 auto;
+}
+
+.purchaseCard {
+  background: #FFF9E6;
+  padding: 2em;
+  border-radius: 0.8em;
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.purchaseCard:hover {
+  transform: translateY(-0.25em);
+}
+
+.purchaseImage {
+  width: 9.375em;
+  height: 9.375em;
+  object-fit: cover;
+  border-radius: 0.5em;
+}
+
+.purchaseInfo {
+  flex: 1;
+}
+
+.purchaseInfo h4 {
+  color: #722F37;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+.purchaseDate {
+  color: #5A1F29;
+  margin: 0.5em 0;
+}
+
+.purchasePrice {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #D4AF37;
+  margin: 1em 0;
+}
+
+.messagesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  max-width: 62.5em;
+  margin: 0 auto;
+}
+
+.messageCard {
+  background: #FFF9E6;
+  padding: 1.5em;
+  border-radius: 0.8em;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.messageCard:hover {
+  transform: translateY(-0.25em);
+}
+
+.messageCard.unread {
+  border-left: 0.3125em solid #D4AF37;
+  background: #FFFEF0;
+}
+
+.messageHeader {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.messageAvatar {
+  width: 3.125em;
+  height: 3.125em;
+  border-radius: 50%;
+  border: 0.125em solid #722F37;
+}
+
+.messageInfo {
+  flex: 1;
+}
+
+.messageInfo h4 {
+  color: #722F37;
+  margin-bottom: 0.3em;
+}
+
+.messagePreview {
+  color: #5A1F29;
+  font-size: 0.95em;
+}
+
+.messageTime {
+  color: #5A1F29;
+  font-size: 0.9em;
+}
+
+.btnReply {
+  background: #722F37;
+  color: #D4AF37;
+  padding: 0.7em 2em;
+  border: none;
+  border-radius: 0.5em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btnReply:hover {
+  background: #5A1F29;
+  transform: translateY(-0.125em);
+}
+
+
+.paymentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  max-width: 50em;
+  margin: 2em auto 0;
+}
+
+.addPaymentBtn {
+  margin-bottom: 2em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paymentCard {
+  background: #FFF9E6;
+  padding: 2em;
+  border-radius: 0.8em;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.paymentCard:hover {
+  transform: translateY(-0.25em);
+}
+
+.cardIcon {
+  font-size: 3em;
+}
+
+.cardDetails {
+  flex: 1;
+}
+
+.cardDetails h4 {
+  color: #722F37;
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+.cardDetails p {
+  color: #5A1F29;
+}
+
+.defaultBadge {
+  display: inline-block;
+  background: #D4AF37;
+  color: #722F37;
+  padding: 0.3em 0.8em;
+  border-radius: 1em;
+  font-size: 0.85em;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+.cardActions {
+  display: flex;
+  gap: 1em;
+}
+
+@media (max-width: 768px) {
+  .profileStats {
+    gap: 1.5em;
+  }
+
+  .profileTabs {
+    flex-direction: column;
+  }
+
+  .listingsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .purchaseCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .messageHeader {
+    flex-wrap: wrap;
+  }
+
+  .paymentCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cardActions {
+    width: 100%;
+  }
+}

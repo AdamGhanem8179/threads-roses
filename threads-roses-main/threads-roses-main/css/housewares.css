@@ -1,0 +1,338 @@
+/* Housewares page specific styles
+   Key difference: circular image rings instead of square cards */
+
+body {
+  background: #F5E6D3; /* keep site background */
+}
+
+/* Banner */
+.houseBanner {
+  margin-top: 6em;
+  padding: 3.5em 1.5em;
+  background: linear-gradient(135deg, rgba(212,175,55,0.06), rgba(114,47,55,0.06));
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.houseBanner-inner {
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.houseBanner h1 {
+  color: #722F37;
+  font-size: 2.6em;
+  margin-bottom: .3em;
+}
+
+.houseBanner p {
+  color: #5A1F29;
+  font-size: 1.1em;
+}
+
+/* Grid wrapper */
+.houseGridWrap {
+  width: 92%;
+  max-width: 1400px;
+  margin: 2.5em auto 5em;
+}
+
+/* Grid: 3 columns, but circles create distinct look */
+.houseGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.75em;
+  align-items: start;
+}
+
+/* Card */
+.housecard {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  text-align: center;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+/* Circular image ring */
+.houseImageRing {
+  width: 17.5rem;  /* circle diameter */
+  height: 17.5rem;
+  border-radius: 50%;
+  padding: 0.6rem;               /* ring thickness */
+  background: linear-gradient(180deg, rgba(212,175,55,0.12), rgba(114,47,55,0.06));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+/* the actual circular image */
+.houseImageRing img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 6px 18px rgba(114,47,55,0.12);
+  border: 6px solid #FFFDF7; /* subtle white separator */
+}
+
+/* Hover effect */
+.housecard:hover {
+  transform: translateY(-10px);
+}
+
+.housecard:hover .houseImageRing {
+  transform: scale(1.03) rotate(-1deg);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* Info under circle */
+.houseInfo {
+  width: 100%;
+}
+
+.housePrice {
+  color: #722F37;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: .35em;
+}
+
+.houseInfo h3 {
+  color: #5A1F29;
+  font-size: 1.05em;
+  margin: 0;
+}
+
+/* button */
+.houseBtn {
+  margin-top: .9em;
+  padding: 0.6em 1.1em;
+  background: linear-gradient(135deg,#722F37,#5A1F29);
+  color: #D4AF37;
+  border: 2px solid #D4AF37;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform .18s ease;
+}
+
+.houseBtn:hover {
+  transform: translateY(-3px);
+}
+
+/* MODAL — same layout as Shoes page */
+.modaloverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  backdrop-filter: blur(0px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.35s ease;
+}
+
+.modaloverlay.active {
+  display: flex;
+  opacity: 1;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+}
+
+/* Main box */
+.modalcontent {
+  background: linear-gradient(135deg, #FFF9E6, #FFFBF0);
+  border: 8px solid #D4AF37;
+  border-radius: 16px;
+  padding: 25px;
+  width: 850px;
+  max-width: 92%;
+  max-height: 88vh;
+  overflow-y: auto;
+  position: relative;
+  transform: scale(0.85);
+  opacity: 0;
+  transition: all 0.32s ease;
+}
+
+.modaloverlay.active .modalcontent {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* X Button */
+.closebtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.6em;
+  cursor: pointer;
+  color: #722F37;
+}
+
+/* Body: image left / details right */
+.modalbody {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+/* Image */
+.modalbody img {
+  width: 48%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+}
+
+/* Details */
+.modaldetails {
+  width: 52%;
+}
+
+.modaldetails h2 {
+  font-size: 1.9em;
+  color: #722F37;
+  margin-top: 0;
+}
+
+.modalprice {
+  color: #5A1F29;
+  font-size: 1.5em;
+  margin: 10px 0 18px;
+  font-weight: bold;
+}
+
+.modaldescription {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+/* Add to cart button */
+.addtocartbtn {
+  background: linear-gradient(135deg, #722F37, #5A1F29);
+  border: 2px solid #D4AF37;
+  color: #D4AF37;
+  padding: 0.7em 1.2em;
+  border-radius: 26px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.addtocartbtn:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+
+  /* Banner */
+  .houseBanner h1 {
+    font-size: 2.2em;
+  }
+
+  .houseBanner p {
+    font-size: 1.05em;
+  }
+
+  /* Grid becomes 2 columns */
+  .houseGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.2em;
+  }
+
+  .houseImageRing {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  /* Modal */
+  .modalcontent {
+    width: 650px;
+    padding: 22px;
+  }
+
+  .modalbody img {
+    height: 330px;
+  }
+
+  .modaldetails h2 {
+    font-size: 1.7em;
+  }
+
+  .modalprice {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* Banner */
+  .houseBanner {
+    padding: 2.2em 1em;
+  }
+
+  .houseBanner h1 {
+    font-size: 1.75em;
+  }
+
+  .houseBanner p {
+    font-size: 0.95em;
+  }
+
+  /* Grid becomes 1 column */
+  .houseGrid {
+    grid-template-columns: 1fr;
+    gap: 1.8em;
+  }
+
+  .houseImageRing {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  /* Modal adjusts to full-width */
+  .modalcontent {
+    width: 92%;
+    padding: 18px;
+  }
+
+  .modalbody {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .modalbody img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .modaldetails h2 {
+    font-size: 1.4em;
+  }
+
+  .modalprice {
+    font-size: 1.15em;
+  }
+
+  .modaldescription {
+    font-size: 0.95em;
+  }
+}

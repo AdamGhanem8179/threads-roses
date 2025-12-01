@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings - Threads & Roses</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/settings.css" />
+</head>
+<body>
+  <nav id="navBar">
+        <ul class="menu">
+            <li><a href="clothing.html">Clothing</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="housewares.html">Housewares</a></li>
+            <li><a href="furniture.html">Furniture</a></li>
+            <li><a href="shoes.html">Shoes</a></li>
+            <li><a href="worn.html">Worn</a></li>
+        </ul>
+        <div class="settingsBox">
+            <div class="settingsIcon">⚙️</div>
+            <div class="sideMenu">
+                <ul>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="shoppingcart.html">Shopping Cart</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="logoBtn">
+            <a href="../index.html">
+                <img src="../images/LOGO1.svg" alt="Logo" class="navLogo" />
+            </a>
+        </div>
+    </nav>
+
+
+  <hr/>
+
+  <div class="settingsHeader">
+    <h1>Account Settings</h1>
+    <a href="profile.html" class="profileLink">View My Profile →</a>
+  </div>
+
+  <section class="settingsNav">
+    <button class="settingsTab active" data-section="account"> Account Info</button>
+    <button class="settingsTab" data-section="complaints"> Complaints & Support</button>
+    <button class="settingsTab" data-section="notifications"> Notifications</button>
+    <button class="settingsTab" data-section="payment"> Payment & Wallet</button>
+    <button class="settingsTab" data-section="shipping"> Shipping</button>
+    <button class="settingsTab" data-section="display"> Display</button>
+    <button class="settingsTab" data-section="privacy">Privacy & Security</button>
+    <button class="settingsTab" data-section="feedback">Feedback</button>
+    <button class="settingsTab" data-section="danger"> Danger Zone</button>
+  </section>
+
+ 
+  <div class="settingsContent">
+
+
+    <section class="settingsSection active" id="account">
+      <h2>Account Information</h2>
+      
+      <div class="formGroup">
+        <label>Profile Picture</label>
+        <div class="profilePicSection">
+          <img src="../images/user.webp" alt="Profile" class="settingsPic" id="settingsPic" />
+          <div class="picButtons">
+            <button class="btnChange" id="changePicBtn">Change Picture</button>
+            <button class="btnRemove">Remove Picture</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="formGroup">
+        <label for="username">Username</label>
+        <input type="text" id="username" value="vintagelover_23" />
+        <span class="verifyBadge">✓ Verified Seller</span>
+      </div>
+
+      <div class="formGroup">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" value="Sarah Johnson" />
+      </div>
+
+      <div class="formGroup">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" value="sarah.johnson@email.com" />
+        <span class="verifyBadge pending"> Verify Email</span>
+      </div>
+
+      <div class="formGroup">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" value="+961 81 876 959" />
+      </div>
+
+      <div class="formGroup">
+        <label>Password</label>
+        <button class="btnSecondary">Change Password</button>
+      </div>
+
+      <button class="btnPrimary saveBtn">Save Changes</button>
+    </section>
+
+    <section class="settingsSection" id="complaints">
+      <h2>Complaints & Support</h2>
+      
+      <div class="infoBox">
+        <p>Have an issue? We're here to help. File a complaint and our team will respond within 24-48 hours.</p>
+      </div>
+
+      <button class="btnPrimary" id="fileComplaintBtn">+ File a Complaint</button>
+
+      <div class="complaintForm hidden" id="complaintForm">
+        <h3>New Complaint</h3>
+        
+        <div class="formGroup">
+          <label for="complaintCategory">Category</label>
+          <select id="complaintCategory">
+            <option>Select a category...</option>
+            <option>Product Issue</option>
+            <option>Scam / Fraud</option>
+            <option>Payment Problem</option>
+            <option>User Behavior</option>
+            <option>Shipping Issue</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="formGroup">
+          <label for="complaintMessage">Describe Your Issue</label>
+          <textarea id="complaintMessage" rows="6" placeholder="Please provide details about your complaint..."></textarea>
+        </div>
+
+        <div class="formGroup">
+          <label for="complaintEvidence">Attach Evidence (Optional)</label>
+          <input type="file" id="complaintEvidence" accept="image/*" />
+        </div>
+
+        <div class="formActions">
+          <button class="btnPrimary">Submit Complaint</button>
+          <button class="btnSecondary" id="cancelComplaintBtn">Cancel</button>
+        </div>
+      </div>
+
+      <h3>My Complaint History</h3>
+      <div class="complaintHistory">
+        <div class="complaintCard">
+          <div class="complaintHeader">
+            <span class="complaintId">Complaint #TR-2025-0847</span>
+            <span class="complaintStatus resolved">Resolved</span>
+          </div>
+          <p class="complaintDate">Submitted: October 28, 2025</p>
+          <p class="complaintCategory">Category: Product Issue</p>
+          <p class="complaintDesc">Item received was damaged during shipping...</p>
+          <div class="complaintResponse">
+            <strong>Admin Response:</strong> We've issued a full refund. Apologies for the inconvenience.
+          </div>
+          <button class="btnSecondary">Rate Resolution</button>
+        </div>
+
+        <div class="complaintCard">
+          <div class="complaintHeader">
+            <span class="complaintId">Complaint #TR-2025-0623</span>
+            <span class="complaintStatus pending">Pending</span>
+          </div>
+          <p class="complaintDate">Submitted: November 5, 2025</p>
+          <p class="complaintCategory">Category: Payment Problem</p>
+          <p class="complaintDesc">Payment was charged twice for the same order...</p>
+          <div class="complaintResponse">
+            <strong>Status:</strong> Our team is investigating. You'll receive an update within 24 hours.
+          </div>
+          <button class="btnSecondary">Add Reply</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="settingsSection" id="notifications">
+      <h2>Notifications & Alerts</h2>
+      
+      <div class="infoBox">
+        <p>Manage how and when you receive notifications about your account activity.</p>
+      </div>
+
+      <div class="toggleGroup">
+        <div class="toggleItem">
+          <div class="toggleLabel">
+            <span> Someone likes my item</span>
+            <p class="toggleDesc">Get notified when users like your listings</p>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggleItem">
+          <div class="toggleLabel">
+            <span> New messages or purchases</span>
+            <p class="toggleDesc">Stay updated on buyer inquiries and sales</p>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggleItem">
+          <div class="toggleLabel">
+            <span> Offers and promotions</span>
+            <p class="toggleDesc">Receive exclusive deals and special offers</p>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggleItem">
+          <div class="toggleLabel">
+            <span> Order updates</span>
+            <p class="toggleDesc">Track shipping and delivery notifications</p>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="formGroup">
+        <label for="emailFrequency">Email Summary Frequency</label>
+        <select id="emailFrequency">
+          <option>Never</option>
+          <option selected>Daily</option>
+          <option>Weekly</option>
+          <option>Monthly</option>
+        </select>
+      </div>
+
+      <button class="btnPrimary saveBtn">Save Notification Preferences</button>
+    </section>
+
+    <section class="settingsSection" id="payment">
+      <h2>Payment & Wallet</h2>
+      
+      <div class="walletBalance">
+        <h3>Wallet Balance</h3>
+        <p class="balance">$247.50</p>
+        <button class="btnSecondary">Withdraw Funds</button>
+      </div>
+
+      <h3>Saved Payment Methods</h3>
+      <div class="paymentMethods">
+        <div class="paymentItem">
+          <span class="paymentIcon">💳</span>
+          <div class="paymentDetails">
+            <strong>Visa ending in 4242</strong>
+            <p>Expires 12/2026</p>
+          </div>
+          <span class="defaultBadge">Default</span>
+          <button class="btnRemove">Remove</button>
+        </div>
+
+        <div class="paymentItem">
+          <span class="paymentIcon">💳</span>
+          <div class="paymentDetails">
+            <strong>Mastercard ending in 8888</strong>
+            <p>Expires 09/2027</p>
+          </div>
+          <button class="btnSecondary">Set as Default</button>
+          <button class="btnRemove">Remove</button>
+        </div>
+
+        <div class="paymentItem">
+          <span class="paymentIcon">🅿️</span>
+          <div class="paymentDetails">
+            <strong>PayPal</strong>
+            <p>vintagelover@email.com</p>
+          </div>
+          <button class="btnRemove">Remove</button>
+        </div>
+      </div>
+
+      <button class="btnPrimary">+ Add New Payment Method</button>
+
+      <h3>Payout Account</h3>
+      <div class="formGroup">
+        <label for="payoutMethod">Payout Method</label>
+        <select id="payoutMethod">
+          <option>Bank Transfer</option>
+          <option selected>PayPal</option>
+          <option>Stripe</option>
+        </select>
+      </div>
+
+      <div class="formGroup">
+        <label for="payoutEmail">Payout Email/Account</label>
+        <input type="email" id="payoutEmail" value="sarah.johnson@email.com" />
+      </div>
+
+      <button class="btnPrimary saveBtn">Save Payout Settings</button>
+    </section>
+
+    <section class="settingsSection" id="shipping">
+      <h2>Shipping & Address</h2>
+      
+      <h3>Default Shipping Address</h3>
+      <div class="addressCard">
+        <p><strong>Sarah Johnson</strong></p>
+        <p>123 Vintage Street, Apartment 4B</p>
+        <p>Baabda, Mont-Liban</p>
+        <p>Lebanon, 1234</p>
+        <p>Phone: +961 81 876 959</p>
+        <div class="addressActions">
+          <button class="btnSecondary">Edit</button>
+          <button class="btnRemove">Delete</button>
+        </div>
+      </div>
+
+      <button class="btnPrimary">+ Add New Address</button>
+
+      <h3>Shipping Preferences</h3>
+      <div class="formGroup">
+        <label for="preferredCourier">Preferred Courier</label>
+        <select id="preferredCourier">
+          <option>Any Courier</option>
+          <option>DHL</option>
+          <option>FedEx</option>
+          <option>UPS</option>
+          <option>Local Post</option>
+        </select>
+      </div>
+
+      <div class="formGroup">
+        <label for="deliveryType">Delivery Type</label>
+        <select id="deliveryType">
+          <option selected>Standard (5-7 days)</option>
+          <option>Express (2-3 days)</option>
+          <option>Next Day</option>
+        </select>
+      </div>
+
+      <h3>Pickup Location (For Sellers)</h3>
+      <div class="formGroup">
+        <label for="pickupAddress">Pickup Address</label>
+        <textarea id="pickupAddress" rows="4">123 Vintage Street, Apartment 4B, Baabda, Mont-Liban, Lebanon</textarea>
+      </div>
+
+      <button class="btnPrimary saveBtn">Save Shipping Preferences</button>
+    </section>
+
+    <section class="settingsSection" id="display">
+      <h2>Display & Preferences</h2>
+      
+      <div class="formGroup">
+        <label>Theme Mode</label>
+        <div class="radioGroup">
+          <label class="radioOption">
+            <input type="radio" name="theme" value="light" checked />
+            <span> Light</span>
+          </label>
+          <label class="radioOption">
+            <input type="radio" name="theme" value="dark" />
+            <span> Dark</span>
+          </label>
+          <label class="radioOption">
+            <input type="radio" name="theme" value="auto" />
+            <span> Auto</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="formGroup">
+        <label for="currency">Currency Preference</label>
+        <select id="currency">
+          <option selected>USD ($)</option>
+          <option>EUR (€)</option>
+          <option>LBP (ل.ل)</option>
+          <option>GBP (£)</option>
+        </select>
+      </div>
+
+      <div class="formGroup">
+        <label for="language">Language</label>
+        <select id="language">
+          <option selected>English</option>
+          <option>Arabic (العربية)</option>
+          <option>French (Français)</option>
+        </select>
+      </div>
+
+      <div class="formGroup">
+        <label for="itemsPerPage">Items Per Page</label>
+        <select id="itemsPerPage">
+          <option>5</option>
+          <option selected>10</option>
+          <option>20</option>
+          <option>50</option>
+        </select>
+      </div>
+
+      <div class="formGroup">
+        <label for="defaultSection">Default Home Section</label>
+        <select id="defaultSection">
+          <option selected>Shop</option>
+          <option>My Listings</option>
+          <option>Messages</option>
+          <option>Profile</option>
+        </select>
+      </div>
+
+      <button class="btnPrimary saveBtn">Save Display Preferences</button>
+    </section>
+
+    <section class="settingsSection" id="privacy">
+      <h2>Privacy & Security</h2>
+      
+      <div class="toggleGroup">
+        <div class="toggleItem">
+          <div class="toggleLabel">
+            <span>Show email on public profile</span>
+            <p class="toggleDesc">Let others see your email address</p>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggleItem">
+          <div class="toggleLabel">
+            <span>Allow messages only from followers</span>
+            <p class="toggleDesc">Restrict who can contact you</p>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggleItem">
+          <div class="toggleLabel">
+            <span>Two-Factor Authentication</span>
+            <p class="toggleDesc">Add extra security to your account</p>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggleItem">
+          <div class="toggleLabel">
+            <span>Profile visibility</span>
+            <p class="toggleDesc">Make your profile visible to everyone</p>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <h3>Active Sessions</h3>
+      <div class="sessionsList">
+        <div class="sessionItem">
+          <div class="sessionInfo">
+            <strong> Chrome on Windows</strong>
+            <p>IP: 192.168.1.100 • Baabda, Lebanon</p>
+            <p>Last active: Just now</p>
+          </div>
+          <span class="currentBadge">Current</span>
+        </div>
+
+        <div class="sessionItem">
+          <div class="sessionInfo">
+            <strong> Safari on iPhone</strong>
+            <p>IP: 192.168.1.105 • Baabda, Lebanon</p>
+            <p>Last active: 2 hours ago</p>
+          </div>
+          <button class="btnRemove">Logout</button>
+        </div>
+      </div>
+
+      <h3>Blocked Users</h3>
+      <div class="blockedList">
+        <div class="blockedItem">
+          <img src="../images/user.webp" alt="User" class="blockedAvatar" />
+          <div class="blockedInfo">
+            <strong>@spammer_user</strong>
+            <p>Blocked on October 15, 2025</p>
+          </div>
+          <button class="btnSecondary">Unblock</button>
+        </div>
+      </div>
+
+      <button class="btnPrimary saveBtn">Save Privacy Settings</button>
+    </section>
+
+    <section class="settingsSection" id="feedback">
+      <h2>Feedback & Suggestions</h2>
+      
+      <div class="infoBox">
+        <p>We value your opinion! Share your thoughts and help us improve Threads & Roses.</p>
+      </div>
+
+      <div class="formGroup">
+        <label for="feedbackText">What should we improve?</label>
+        <textarea id="feedbackText" rows="6" placeholder="Share your ideas, suggestions, or feedback here..."></textarea>
+      </div>
+
+      <div class="formGroup">
+        <label>How would you rate your overall experience?</label>
+        <div class="starRating">
+          <span class="star" data-value="1">⭐</span>
+          <span class="star" data-value="2">⭐</span>
+          <span class="star" data-value="3">⭐</span>
+          <span class="star" data-value="4">⭐</span>
+          <span class="star" data-value="5">⭐</span>
+        </div>
+        <p class="ratingText">Not rated yet</p>
+      </div>
+
+      <button class="btnPrimary">Send Feedback</button>
+    </section>
+
+    <section class="settingsSection dangerZone" id="danger">
+      <h2>🚨 Danger Zone</h2>
+      
+      <div class="warningBox">
+        <p><strong>Warning:</strong> These actions are permanent and cannot be undone.</p>
+      </div>
+
+      <div class="dangerAction">
+        <div class="dangerInfo">
+          <h3>Deactivate Account</h3>
+          <p>Temporarily disable your account. You can reactivate it anytime by logging back in.</p>
+        </div>
+        <button class="btnDanger" id="deactivateBtn">Deactivate Account</button>
+      </div>
+
+      <div class="dangerAction">
+        <div class="dangerInfo">
+          <h3>Delete Account Permanently</h3>
+          <p>Permanently delete your account and all associated data. This action cannot be reversed.</p>
+        </div>
+        <button class="btnDanger" id="deleteBtn">Delete Account</button>
+      </div>
+    </section>
+
+  </div>
+ <footer>
+        <div class="footercontainer">
+            <div class="footercolumn">
+                <p class="Headers">Connect with us</p>
+                <div class="media">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook_logo.webp" alt="facebook logo">
+                            </a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><img src="../images/instagram_logo.webp" alt="instagram logo"></a></li>
+                        <li><a href="https://www.tiktok.com/" target="_blank"><img src="../images/tiktok_logo.webp" alt="tiktok logo"></a>
+                        </li>
+                        <li><a href="https://x.com/" target="_blank"><img src="../images/twitter_logo.webp" alt="twitter logo"></a></li>
+                    </ul>
+                </div>
+                <p style="margin-top: 1.5em;">Follow us for daily vintage finds and exclusive drops!</p>
+            </div>
+            <div class="footercolumn">
+                <p class="Headers">Contact Us</p>
+                <p><strong>Email:</strong></p>
+                <p><a href="mailto:Threads&Roses@thrifted.com">Threads&Roses@thrifted.com</a></p>
+                <p><strong>Phone:</strong></p>
+                <p><a href="tel:+96181876959">+961 81 876 959</a></p>
+            </div>
+            <div class="footercolumn">
+                <p class="Headers">Store Info</p>
+                <p><strong>🏪 Store Hours</strong></p>
+                <p>Mon-Sat: 11 am-8 pm</p>
+                <p>Sun: 11 am-7 pm</p>
+                <p><strong>📍 Address</strong></p>
+                <p>lebanon test test test test test</p>
+                <p>test test test</p>
+                <p>antonine college</p>
+            </div>
+            <div class="footercolumn">
+                <p class="Headers">Quick Links</p>
+                <ul>
+                    <li><a href="clothing.html">Shop Clothing</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="shoppingcart.html">Shopping Cart</a></li>
+                </ul>
+                <p style="margin-top: 1.5em;"><strong>📧 Newsletter</strong></p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footerbottom">
+            <p>&copy; 2024 Threads & Roses. All rights reserved. | Sustainable Vintage Fashion</p>
+        </div>
+    </footer>
+
+  <script src="../javascript/main.js"></script>
+  <script src="../javascript/settings.js"></script>
+</body>
+</html>

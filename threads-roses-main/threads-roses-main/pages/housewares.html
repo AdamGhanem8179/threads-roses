@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Housewares – Threads & Roses</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/housewares.css" />
+</head>
+<body>
+
+  
+    <nav id="navBar">
+        <ul class="menu">
+            <li><a href="../pages/clothing.html">Clothing</a></li>
+            <li><a href="../pages/accessories.html">Accessories</a></li>
+            <li><a href="../pages/housewares.html">Housewares</a></li>
+            <li><a href="../pages/furniture.html">Furniture</a></li>
+            <li><a href="../pages/shoes.html">Shoes</a></li>
+            <li><a href="../pages/worn.html">Worn</a></li>
+        </ul>
+        <div class="settingsBox">
+            <div class="settingsIcon">⚙️</div>
+            <div class="sideMenu">
+                <ul>
+                    <li><a href="../pages/settings.html">Settings</a></li>
+                    <li><a href="../pages/faq.html">FAQ</a></li>
+                    <li><a href="../pages/profile.html">Profile</a></li>
+                    <li><a href="../pages/shoppingcart">Shopping Cart</a></li>
+                    <li><a href="../pages/aboutus.html">About Us</a></li>
+                    <li><a href="../pages/contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="logoBtn">
+            <a href="../index.html">
+                <img src="../images/LOGO1.svg" alt="Logo" class="navLogo" />
+            </a>
+        </div>
+    </nav>
+   
+
+  
+  
+  <header class="houseBanner">
+    <div class="houseBanner-inner">
+      <h1>Home Finds — Functional & Lovely</h1>
+      <p>Curated housewares with stories — from kitchenware to cosy textiles.</p>
+    </div>
+  </header>
+
+  <!-- HOUSEWARES GRID -->
+  <main class="houseGridWrap">
+    <section class="houseGrid">
+
+      <!-- Card 1 -->
+      <article class="housecard"
+               datatitle="Candle Holders"
+               dataprice="$29.00"
+               datadescription="A matched pair of brass candle holders — minimal and timeless.">
+        <div class="houseImageRing">
+          <img src="../images/house1.webp" alt="Hand-blown Glass Vase">
+        </div>
+        <div class="houseInfo">
+          <p class="housePrice">$29.00</p>
+          <h3>Hand-blown Glass Vase</h3>
+        </div>
+        <button class="houseBtn">Press for More</button>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="housecard"
+               datatitle="vintage glass oil lamps"
+               dataprice="$34.50"
+               datadescription="A nested set of three ceramic bowls with natural glaze and sturdy weight.">
+        <div class="houseImageRing">
+          <img src="../images/house6.webp" alt="Ceramic Mixing Bowl Set">
+        </div>
+        <div class="houseInfo">
+          <p class="housePrice">$34.50</p>
+          <h3>Vintage Glass Oil Lamps</h3>
+        </div>
+        <button class="houseBtn">Press for More</button>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="housecard"
+               datatitle="Ceramic Kitchen set"
+               dataprice="$22.99"
+               datadescription="Soft woven throw with tasseled edges — cozy, lightweight, and breathable.">
+        <div class="houseImageRing">
+          <img src="../images/house4.avif" alt="Woven Cotton Throw">
+        </div>
+        <div class="houseInfo">
+          <p class="housePrice">$22.99</p>
+          <h3>Ceramic Kitchen set</h3>
+        </div>
+        <button class="houseBtn">Press for More</button>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="housecard"
+               datatitle="Green Carafe"
+               dataprice="$27.00"
+               datadescription="A matched pair of brass candle holders — minimal and timeless.">
+        <div class="houseImageRing">
+          <img src="../images/house7.webp" alt="Brass Candle Holders">
+        </div>
+        <div class="houseInfo">
+          <p class="housePrice">$27.00</p>
+          <h3>Green Carafe</h3>
+        </div>
+        <button class="houseBtn">Press for More</button>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="housecard"
+               datatitle="Glass Vase"
+               dataprice="$48.00"
+               datadescription="Sturdy vintage copper kettle with charming patina — great as decor or for light use.">
+        <div class="houseImageRing">
+          <img src="../images/house9.webp" alt="Vintage Copper Kettle">
+        </div>
+        <div class="houseInfo">
+          <p class="housePrice">$48.00</p>
+          <h3>Glass Vase</h3>
+        </div>
+        <button class="houseBtn">Press for More</button>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="housecard"
+               datatitle="Vintage Floor Lamp"
+               dataprice="$33.00"
+               datadescription="Polished marble board with leather strap—perfect for serving and gifting.">
+        <div class="houseImageRing">
+          <img src="../images/house2.webp" alt="Marble Cheese Board">
+        </div>
+        <div class="houseInfo">
+          <p class="housePrice">$33.00</p>
+          <h3>Vintage Floor Lamp</h3>
+        </div>
+        <button class="houseBtn">Press for More</button>
+      </article>
+
+    </section>
+  </main>
+
+ <div class="modaloverlay" id="modalOverlay">
+  <div class="modalcontent">
+    <button class="closebtn" id="closeBtn">✕</button>
+    
+    <div class="modalbody">
+      <img src="" alt="" id="modalImage">
+
+      <div class="modaldetails">
+        <h2 id="modalTitle"></h2>
+        <p class="modalprice" id="modalPrice"></p>
+        <p class="modaldescription" id="modalDescription"></p>
+
+        <button class="addtocartbtn">
+          <span class="carticon">🛒</span> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <footer>
+        <div class="footercontainer">
+            <div class="footercolumn">
+                <p class="Headers">Connect with us</p>
+                <div class="media">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook_logo.webp" alt="facebook logo">
+                            </a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><img src="../images/instagram_logo.webp" alt="instagram logo"></a></li>
+                        <li><a href="https://www.tiktok.com/" target="_blank"><img src="../images/tiktok_logo.webp" alt="tiktok logo"></a>
+                        </li>
+                        <li><a href="https://x.com/" target="_blank"><img src="../images/twitter_logo.webp" alt="twitter logo"></a></li>
+                    </ul>
+                </div>
+                <p style="margin-top: 1.5em;">Follow us for daily vintage finds and exclusive drops!</p>
+            </div>
+            <div class="footercolumn">
+                <p class="Headers">Contact Us</p>
+                <p><strong>Email:</strong></p>
+                <p><a href="mailto:Threads&Roses@thrifted.com">Threads&Roses@thrifted.com</a></p>
+                <p><strong>Phone:</strong></p>
+                <p><a href="tel:+96181876959">+961 81 876 959</a></p>
+            </div>
+            <div class="footercolumn">
+                <p class="Headers">Store Info</p>
+                <p><strong>🏪 Store Hours</strong></p>
+                <p>Mon-Sat: 11 am-8 pm</p>
+                <p>Sun: 11 am-7 pm</p>
+                <p><strong>📍 Address</strong></p>
+                <p>lebanon test test test test test</p>
+                <p>test test test</p>
+                <p>antonine college</p>
+            </div>
+            <div class="footercolumn">
+                <p class="Headers">Quick Links</p>
+                <ul>
+                   
+                    <li><a href="clothing.html">Shop Clothing</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="shoppingcart.html">Shopping Cart</a></li>
+                </ul>
+                <p style="margin-top: 1.5em;"><strong>📧 Newsletter</strong></p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footerbottom">
+            <p>&copy; 2024 Threads & Roses. All rights reserved. | Sustainable Vintage Fashion</p>
+        </div>
+    </footer>
+
+
+  <!-- page JS -->
+  <script src="../javascript/housewares.js"></script>
+  <script src="../javascript/main.js"></script>
+</body>
+</html>

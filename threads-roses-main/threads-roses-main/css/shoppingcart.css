@@ -1,0 +1,161 @@
+body {
+  background: #F5E6D3;
+  font-family: "Times New Roman", serif;
+}
+
+/* WRAPPER */
+.cartWrapper {
+  margin: 8em auto 2em;
+  max-width: 900px;
+  padding: 2em;
+  background: #FFF9E6;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 10px rgba(114, 47, 55, 0.4);
+  
+ 
+}
+
+.cartHeading {
+  color: #722F37;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+/* ITEMS CONTAINER */
+.cartItems {
+  gap:1em;
+  display: flex;
+  flex-direction: column;
+  max-height: 470px;   
+  overflow-y: auto;    
+  padding-right: 10px;
+  
+}
+
+.singleItem {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FCF5E5;
+  padding: 1em;
+  border-left: 4px solid #722F37;
+  border-radius: 0.5em;
+}
+
+.singleItem img {
+  width: 7em;
+  height: 7em;
+  object-fit: cover;
+  border-radius: 0.3em;
+}
+
+.details {
+  flex: 1;
+  margin-left: 1em;
+}
+
+.details h2 {
+  color: #722F37;
+  margin-bottom: 0.3em;
+}
+
+.qtyBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  
+}
+
+.qtyInput {
+    
+  font-size: 1em;
+  width: 3.5em;
+  height: 2em;
+  text-align: center;
+  border: 1px solid #722F37;
+}
+
+
+/* FOOTER PRICE & CHECKOUT */
+.cartSummary {
+  font-size: 1.2em;
+  margin-top: 2em;
+  text-align: right;
+}
+
+.checkoutBtn {
+  font-size:1em;
+  width:15em;
+  margin-top: 2em;
+  padding: 0.8em 2em;
+  background: #722F37;
+  color: #D4AF37;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5em;
+  transition: transform 0.3s;
+}
+
+.checkoutBtn:hover {
+   
+      transform: scale(1.05);
+  background: #5A1F29;
+}
+
+.removeBtn {
+  width:8em;
+  height:3em;
+  font-weight: bold;
+  background: transparent;
+  color: #722F37;
+  border: 2px solid #722F37;
+  padding: 0.4em 0.8em;
+  cursor: pointer;
+  border-radius: 0.3em;
+}
+
+.removeBtn:hover {
+  background: #722F37;
+  color: #D4AF37;
+}
+
+/* PRICE */
+.priceTag {
+  margin-right:2em;
+  font-size: 1.2em;
+  color: #722F37;
+}
+ 
+
+.cartExtras{
+  color: #5A1F29;
+  margin-top:2em;
+
+}
+
+.feedback{
+
+  margin-top: 20px;
+  text-align: center;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  margin-bottom: 1em;
+}
+
+.feedback p{
+   margin-bottom: 8px;
+  font-size: 1.3em;
+}
+
+.contactlink {
+  padding: 8px 15px;
+  text-decoration: none;
+  color:#5A1F29;
+  font-size: 1.2em;
+
+}
+
+.contactlink:hover{
+  text-decoration: underline;
+}
