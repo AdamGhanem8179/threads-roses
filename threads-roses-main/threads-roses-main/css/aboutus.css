@@ -138,3 +138,38 @@ body {
 .teamMember p {
   color: #5A1F29;
 }
+
+@media (max-width: 992px) {
+  .ourStory {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5em;
+  }
+
+  .storyImage img {
+    width: 100%;
+    margin-top: 1em;
+  }
+
+
+
+  .missionText {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .missionCard {
+    width: 90%;
+  }
+
+
+  .teamContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .teamMember {
+    width: 90%;
+  }
+}
+
