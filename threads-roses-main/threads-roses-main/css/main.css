@@ -522,6 +522,7 @@ nav.visible {
   nav {
     padding: 1em 1.5em;
     justify-content: space-between;
+    align-items: center; /* ADD THIS */
   }
 
   .settingsBox {
@@ -532,48 +533,33 @@ nav.visible {
 
   .menu {
     display: flex;
-    gap: 0.8em;
-    font-size: 0.75em;
+    gap: 1.2em;
+    font-size: 0.95em;
     order: 0;
-    flex-wrap: nowrap; 
-    white-space: nowrap; 
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    align-items: center; /* ADD THIS */
   }
 
   .menu li {
-    white-space: nowrap; 
+    white-space: nowrap;
   }
 
   .logoBtn {
-    position: static;
+    position: static; /* Keep this */
     order: 1;
+    display: flex; /* ADD THIS */
+    align-items: center; /* ADD THIS */
+  }
+
+  .logoBtn a {
+    display: flex; /* ADD THIS */
+    align-items: center; /* ADD THIS */
   }
 
   .navLogo {
-    width: 2em;
-    height: 2em;
+    width: 2.5em;
+    height: 2.5em;
+    display: block; /* ADD THIS */
   }
-  
-}
-
-@media (max-width: 480px) {
-  .menu {
-    gap: 0.5em;
-    font-size: 0.65em;
-    flex-wrap: nowrap; 
-  }
-  
-  .menu li {
-    white-space: nowrap; 
-  }
-
-  .navLogo {
-    width: 1.8em;
-    height: 1.8em;
-  }
-
-  .settingsIcon {
-    font-size: 1.1em;
-  }
-  
-}
 }
