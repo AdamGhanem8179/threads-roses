@@ -517,7 +517,7 @@ nav.visible {
     flex-wrap: wrap;
   }
 }
-
+/* we used ai here since it was wrapping at the media qwuery */
 @media (max-width: 900px) {
   nav {
     padding: 1em 1.5em;
@@ -535,7 +535,12 @@ nav.visible {
     gap: 0.8em;
     font-size: 0.75em;
     order: 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; 
+    white-space: nowrap; 
+  }
+
+  .menu li {
+    white-space: nowrap; 
   }
 
   .logoBtn {
@@ -547,46 +552,18 @@ nav.visible {
     width: 2em;
     height: 2em;
   }
-
-  .title {
-    font-size: 1.4em;
-  }
-
-  .MidText h1 {
-    font-size: 2em;
-  }
-
-  .infoGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .ctaButtons {
-    flex-direction: column;
-  }
-
-  .showcase .items {
-    flex-direction: column;
-  }
-
-  .showcase .card {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .footercontainer {
-    flex-direction: column;
-    gap: 2em;
-  }
-
-  footer {
-    padding: 4em 2em;
-  }
+  
 }
 
 @media (max-width: 480px) {
   .menu {
     gap: 0.5em;
     font-size: 0.65em;
+    flex-wrap: nowrap; 
+  }
+  
+  .menu li {
+    white-space: nowrap; 
   }
 
   .navLogo {
@@ -597,23 +574,6 @@ nav.visible {
   .settingsIcon {
     font-size: 1.1em;
   }
-
-  .MidText h1 {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-  }
-
-  .btnPrimary, .btnSecondary {
-    padding: 0.8em 1.5em;
-    font-size: 1em;
-  }
-
-  .statsBox {
-    flex-direction: column;
-    gap: 1em;
-  }
-
-  .serviceLeft {
-    padding-left: 1em;
-  }
+  
+}
 }
