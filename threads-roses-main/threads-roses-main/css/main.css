@@ -522,13 +522,15 @@ nav.visible {
   nav {
     padding: 1em 1.5em;
     justify-content: space-between;
-    align-items: center; /* ADD THIS */
+    align-items: center;
+    padding-right: 3em; /* ADD THIS - gives space for scrollbar */
   }
 
   .settingsBox {
     position: static;
     height: auto;
     order: -1;
+    flex-shrink: 0; /* ADD THIS - prevents shrinking */
   }
 
   .menu {
@@ -538,28 +540,64 @@ nav.visible {
     order: 0;
     flex-wrap: nowrap;
     white-space: nowrap;
-    align-items: center; /* ADD THIS */
+    align-items: center;
+    flex-shrink: 1; /* ADD THIS - allows menu to shrink if needed */
+    overflow-x: auto; /* ADD THIS - allows horizontal scroll if absolutely needed */
   }
 
   .menu li {
     white-space: nowrap;
+    flex-shrink: 0; /* ADD THIS - prevents individual items from shrinking */
   }
 
   .logoBtn {
-    position: static; /* Keep this */
+    position: fixed; /* CHANGE back to fixed */
+    right: 1.5em; /* ADD THIS */
+    top: 0.5em; /* ADD THIS */
     order: 1;
-    display: flex; /* ADD THIS */
-    align-items: center; /* ADD THIS */
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* ADD THIS - prevents shrinking */
   }
 
   .logoBtn a {
-    display: flex; /* ADD THIS */
-    align-items: center; /* ADD THIS */
+    display: flex;
+    align-items: center;
   }
 
   .navLogo {
     width: 2.5em;
     height: 2.5em;
-    display: block; /* ADD THIS */
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding-right: 3.5em; /* ADD THIS - more space for scrollbar on smaller screens */
+  }
+
+  .menu {
+    gap: 0.6em; /* DECREASED to fit more items */
+    font-size: 0.8em; /* ADJUSTED */
+    flex-wrap: nowrap;
+  }
+  
+  .menu li {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .logoBtn {
+    right: 1em; /* ADJUSTED for smaller screen */
+  }
+
+  .navLogo {
+    width: 2em; /* ADJUSTED */
+    height: 2em;
+  }
+
+  .settingsIcon {
+    font-size: 1.3em;
   }
 }
