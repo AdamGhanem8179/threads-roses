@@ -517,87 +517,103 @@ nav.visible {
     flex-wrap: wrap;
   }
 }
-/* we used ai here since it was wrapping at the media qwuery */
+
 @media (max-width: 900px) {
   nav {
     padding: 1em 1.5em;
     justify-content: space-between;
-    align-items: center;
-    padding-right: 3em; /* ADD THIS - gives space for scrollbar */
   }
 
   .settingsBox {
     position: static;
     height: auto;
     order: -1;
-    flex-shrink: 0; /* ADD THIS - prevents shrinking */
   }
 
   .menu {
     display: flex;
-    gap: 1.2em;
-    font-size: 0.95em;
+    gap: 0.8em;
+    font-size: 0.75em;
     order: 0;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    align-items: center;
-    flex-shrink: 1; /* ADD THIS - allows menu to shrink if needed */
-    overflow-x: auto; /* ADD THIS - allows horizontal scroll if absolutely needed */
-  }
-
-  .menu li {
-    white-space: nowrap;
-    flex-shrink: 0; /* ADD THIS - prevents individual items from shrinking */
+    flex-wrap: wrap;
   }
 
   .logoBtn {
-    position: fixed; /* CHANGE back to fixed */
-    right: 1.5em; /* ADD THIS */
-    top: 0.5em; /* ADD THIS */
+    position: static;
     order: 1;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0; /* ADD THIS - prevents shrinking */
-  }
-
-  .logoBtn a {
-    display: flex;
-    align-items: center;
   }
 
   .navLogo {
-    width: 2.5em;
-    height: 2.5em;
-    display: block;
+    width: 2em;
+    height: 2em;
+  }
+
+  .title {
+    font-size: 1.4em;
+  }
+
+  .MidText h1 {
+    font-size: 2em;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .showcase .items {
+    flex-direction: column;
+  }
+
+  .showcase .card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footercontainer {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  footer {
+    padding: 4em 2em;
   }
 }
 
 @media (max-width: 480px) {
-  nav {
-    padding-right: 3.5em; /* ADD THIS - more space for scrollbar on smaller screens */
-  }
-
   .menu {
-    gap: 0.6em; /* DECREASED to fit more items */
-    font-size: 0.8em; /* ADJUSTED */
-    flex-wrap: nowrap;
-  }
-  
-  .menu li {
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  .logoBtn {
-    right: 1em; /* ADJUSTED for smaller screen */
+    gap: 0.5em;
+    font-size: 0.65em;
   }
 
   .navLogo {
-    width: 2em; /* ADJUSTED */
-    height: 2em;
+    width: 1.8em;
+    height: 1.8em;
   }
 
   .settingsIcon {
-    font-size: 1.3em;
+    font-size: 1.1em;
+  }
+
+  .MidText h1 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  .btnPrimary, .btnSecondary {
+    padding: 0.8em 1.5em;
+    font-size: 1em;
+  }
+
+  .statsBox {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .serviceLeft {
+    padding-left: 1em;
   }
 }
