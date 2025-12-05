@@ -439,39 +439,6 @@ footer .Headers {
   margin: 0.8em 0;
 }
 
-.newsletterform {
-  display: flex;
-  gap: 0.5em;
-  margin-top: 1em;
-}
-
-.newsletterform input {
-  flex: 1;
-  padding: 0.8em;
-  border: 2px solid #D4AF37;
-  border-radius: 0.3em;
-  background: #5A1F29;
-  color: #F4D03F;
-}
-
-.newsletterform input::placeholder {
-  color: #D4AF37;
-  opacity: 0.7;
-}
-
-.newsletterform button {
-  padding: 0.8em 1.5em;
-  background: #D4AF37;
-  color: #722F37;
-  border: none;
-  border-radius: 0.3em;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.newsletterform button:hover {
-  background: #F4D03F;
-}
 
 .footerbottom {
   background: #5A1F29;
